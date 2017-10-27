@@ -1,0 +1,2359 @@
+USE [EatsyDB]
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name]) VALUES (N'0', N'Admin')
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name]) VALUES (N'3', N'Dinner')
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name]) VALUES (N'1', N'Restaurant Owner')
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name]) VALUES (N'2', N'Waiter')
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'101d9d9b-5352-413c-aa7e-99683adcae4d', N'Nicholas', N'Lim', NULL, CAST(N'2017-08-03T03:15:39.627' AS DateTime), NULL, NULL, N'nic@eatsyapp.co', 1, N'AJQBr2H73KgWHNkv7BN84g0HXV1HaAJ6VfZAxFuiK1hBZY8C55QzFN70TGIB3MVo9A==', N'a1c550fd-1142-4922-ab4c-204baed9b393', NULL, 0, 0, NULL, 1, 0, N'nic@eatsyapp.co', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'1f6e1586-683b-4800-9ef5-aa35133692e0', N'Jane', N'Doe', NULL, CAST(N'2017-07-17T07:45:33.987' AS DateTime), NULL, NULL, N'abcd@def.com', 0, N'AEQwWs8zt58iE/lInvqa+VNcp5kvaboy+quliKDTyrJgJrAd9ldlo3ASxhDrYXiP2A==', N'800ee0f7-4108-4585-b6f0-5e1e36eedc75', NULL, 0, 0, NULL, 1, 0, N'abcd@def.com', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'20814731-2dd1-4d8f-84a4-c28009fb527d', N'Jane', N'Doe', NULL, CAST(N'2017-07-17T07:47:54.967' AS DateTime), NULL, NULL, N'abcd@gmail.com', 0, N'ALcaukrJh8vZMBd+4StPp8cl54Gs3DKrG0+2LE/6laHN4nE7TarkYo29A2uYI1pZVA==', N'76e43c5f-b0fd-4887-ae4e-4b66fc174238', NULL, 0, 0, NULL, 1, 0, N'abcd@gmail.com', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'280d7e5a-9f7c-4074-983c-e312f1ec29fb', N'Astley', N'Half', NULL, CAST(N'2017-10-03T03:36:44.033' AS DateTime), NULL, NULL, N'contact@halfpoundburgers.com', 0, N'AGHRcrBJcBvoQz30gu7QW0p8Z3IszZ36qFhqaOM5TVwBixG736ezKXhcK4R3l97X5A==', N'31a33b9c-ee3e-4439-9235-81a2b344b018', NULL, 0, 0, NULL, 1, 0, N'contact@halfpoundburgers.com', N'Profile_Pictures/280d7e5a-9f7c-4074-983c-e312f1ec29fb', N'jpeg')
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'29bbbecc-1c58-4a63-866c-0914303a80a1', N'Rishi', N'Rjanedram', NULL, CAST(N'2017-07-26T07:04:53.057' AS DateTime), NULL, NULL, N'rr+1@eatsyapp.co', 0, N'AOHKTEz7+S+maE7GqPaN5QkyKeL1IroEgOlSytnjfHOeDHya1HEyCg9Nb6KJVBtOxw==', N'de846eab-1438-4b9d-a82f-84d4c699dc33', NULL, 0, 0, NULL, 1, 0, N'rr@eatsyapp.co', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'4aa92068-0e00-42a0-bc51-209f22c9e1fc', N'FoodOpera_Ion', N'Eatsy', NULL, CAST(N'2017-06-28T05:59:01.380' AS DateTime), NULL, NULL, N'Eatsy+FoodOpera_Ion@gmail.com', 0, N'AG5lxk15HOZ/VAtp/r+5CEks8AWo6Vz293cbSEnTs4vJXiW4M8LP7T183gVxgmOrZA==', N'd6d9545d-6439-4102-a70d-7f43a6a27706', NULL, 0, 0, NULL, 1, 0, N'Eatsy+FoodOpera_Ion@gmail.com', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'503fb475-a39b-4782-a342-d3cd75c9c3fc', N'Russell', N'Yu', NULL, CAST(N'2017-10-11T19:00:37.377' AS DateTime), NULL, NULL, N'umaumaramen@gmail.com', 0, N'AGf6mF6t9a2EfnLBMRQ2qApM6snZTOyW0IlfMrmxj6DSCUnfjJ2grBHaWrZ3Tw36Kw==', N'0c541cc7-08bc-4d73-bd80-f622648aef03', NULL, 0, 0, NULL, 1, 0, N'umaumaramen@gmail.com', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'6f364d5a-7ca8-4a69-bf7c-7e93cd8668d7', N'Hooters Singapore', N'Marina Bay', NULL, CAST(N'2017-10-06T02:45:37.377' AS DateTime), NULL, NULL, N'hello@hootersasia.com', 0, N'AIzq00HCumAESJMpwB4MkDU9P76pd8hLsGOHqxcaDpi3Asq4v2VKAJLXB7uvTLu/CQ==', N'412f7823-fe3d-443d-b13b-d07db69776f5', NULL, 0, 0, NULL, 1, 0, N'hello@hootersasia.com', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'7004e72e-767c-4f8b-8682-63c8c1b43760', N'Joycelyn', N'Ho', NULL, CAST(N'2017-09-26T17:08:38.133' AS DateTime), NULL, NULL, N'hello@otccafe.sg', 0, N'AL9pokdFfv3oFkRTzfEkb0o2nz5nS2okPs3NWj1062tcblwtaVpLyQU/e3aaRn5VUQ==', N'073cb190-a0da-43e6-a4b8-9b3dd990c10c', NULL, 0, 0, NULL, 1, 0, N'hello@otccafe.sg', N'Profile_Pictures/7004e72e-767c-4f8b-8682-63c8c1b43760', N'jpeg')
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'88a1a1ee-8d96-4130-96a8-9102047c55ee', N'Ee Liang', N'Sim ', NULL, CAST(N'2017-06-10T07:11:02.507' AS DateTime), NULL, NULL, N'eeliang@eatsyapp.co', 1, N'ABf5ydQ8aIWh894HdkO3KFp9wifQzJfoHjnN2yUVMMLVxlVYQSlOZZRA23M8ua+6Gg==', N'f0fb6fd8-f34c-4ce2-91cd-278acd452f8c', NULL, 0, 0, NULL, 1, 0, N'eeliang@eatsyapp.co', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'a505b1ab-e962-477d-adfb-5d3139c06349', N'Sojib', N'Miya', NULL, CAST(N'2016-12-19T16:41:00.007' AS DateTime), NULL, NULL, N'sojib352@gmail.com', 0, N'ABVSwlbnd9AzsvdzawWZWXkYIKCrVbBv1ZMiSljUoNeREZs4hli2xM0h1LKt2jmBxg==', N'6cd34ac7-5d45-41c5-b5cf-b5afff0e234a', NULL, 0, 0, NULL, 0, 0, N'sojib352@gmail.com', N'Profile_Pictures/a505b1ab-e962-477d-adfb-5d3139c06349', N'jpeg')
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'd4ed9f2c-291e-46a9-bc77-10a99a422df6', N'Alvin', N'Sng', NULL, CAST(N'2017-09-26T03:37:14.200' AS DateTime), NULL, NULL, N'alvinsng@baronchulia.com', 0, N'AIlqbrSx67kgRzqyzsomJEFG3Z24h0ljGuMSy2l7D5/NeWMS/gxGfc+b9++RRbkYEg==', N'a36f0fb7-8564-4e0a-9f0a-cb4551da81cd', NULL, 0, 0, NULL, 1, 0, N'alvinsng@baronchulia.com', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'da4159d0-7af5-46c7-bc12-298537de799a', N'Rishi', N'Rajendram', NULL, CAST(N'2017-06-08T08:07:56.000' AS DateTime), NULL, NULL, N'rajendramrishi079+1@gmail.com', 1, N'ABVSwlbnd9AzsvdzawWZWXkYIKCrVbBv1ZMiSljUoNeREZs4hli2xM0h1LKt2jmBxg==', N'6cd34ac7-5d45-41c5-b5cf-b5afff0e234a', NULL, 0, 0, NULL, 1, 0, N'rajendramrishi079+1@gmail.com', N'Profile_Pictures/da4159d0-7af5-46c7-bc12-298537de799a', N'jpeg')
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'e05dff71-9fa1-4829-9be6-35d551375a02', N'Rishi', N'Rajendram', NULL, CAST(N'2017-07-24T03:21:55.347' AS DateTime), NULL, NULL, N'hjkl@gmail.com', 1, N'AKFftZGF+JgDgF3Mvs5Kawb4U1ARYR08xEH6efTNsxLvRWAz1fdPn9l4tv7is7iiWw==', N'93c8cd16-7cb9-42f8-86d7-c9da7ed0b99c', NULL, 0, 0, NULL, 1, 0, N'hjkl@gmail.com', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'e28384ab-2377-402b-96df-601feb36915c', N'Mubarak', N'Hossain', NULL, CAST(N'2017-09-27T11:16:43.910' AS DateTime), NULL, NULL, N'mubarak@gmail.com', 0, N'AEa4cNjRPmUN7EALOoIE2l9NiNlYNnD0TfQw6//iNR2B+4g4qVcf1nBkffbITgIhMw==', N'5eef97f1-d9f1-4c00-b231-a46e6c10b306', NULL, 0, 0, NULL, 1, 0, N'mubarak@gmail.com', NULL, NULL)
+GO
+INSERT [dbo].[ApplicationUser] ([Id], [FirstName], [LastName], [Creator], [CreatedAtUTC], [UpdatedAtUTC], [UserIPAddress], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [ProfilePicUrl], [ImageExtension]) VALUES (N'f55c0ff3-4f91-4beb-989d-02536a1f85b6', N'Joel', N'Ong', NULL, CAST(N'2017-10-11T17:12:19.757' AS DateTime), NULL, NULL, N'enquiries@rochorthai.sg', 0, N'AFZWLOXk3y98Nge57fmKCT64xni25JE78mTx38VebSKUuX/QcOaCxQ4C/2zEUHV67A==', N'77fad973-cf6c-4827-a959-76dd2fda8534', NULL, 0, 0, NULL, 1, 0, N'enquiries@rochorthai.sg', NULL, NULL)
+GO
+SET IDENTITY_INSERT [dbo].[Country] ON 
+
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (1, N'AFGHANISTAN', N'Afghanistan', N'AF', N'AFG', N'4', N'93')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (2, N'ALBANIA', N'Albania', N'AL', N'ALB', N'8', N'355')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (3, N'ALGERIA', N'Algeria', N'DZ', N'DZA', N'12', N'213')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (4, N'AMERICAN SAMOA', N'American Samoa', N'AS', N'ASM', N'16', N'1684')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (5, N'ANDORRA', N'Andorra', N'AD', N'AND', N'20', N'376')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (6, N'ANGOLA', N'Angola', N'AO', N'AGO', N'24', N'244')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (7, N'ANGUILLA', N'Anguilla', N'AI', N'AIA', N'660', N'1264')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (9, N'ANTIGUA AND BARBUDA', N'Antigua and Barbuda', N'AG', N'ATG', N'28', N'1268')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (10, N'ARGENTINA', N'Argentina', N'AR', N'ARG', N'32', N'54')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (11, N'ARMENIA', N'Armenia', N'AM', N'ARM', N'51', N'374')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (12, N'ARUBA', N'Aruba', N'AW', N'ABW', N'533', N'297')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (13, N'AUSTRALIA', N'Australia', N'AU', N'AUS', N'36', N'61')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (14, N'AUSTRIA', N'Austria', N'AT', N'AUT', N'40', N'43')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (15, N'AZERBAIJAN', N'Azerbaijan', N'AZ', N'AZE', N'31', N'994')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (16, N'BAHAMAS', N'Bahamas', N'BS', N'BHS', N'44', N'1242')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (17, N'BAHRAIN', N'Bahrain', N'BH', N'BHR', N'48', N'973')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (18, N'BANGLADESH', N'Bangladesh', N'BD', N'BGD', N'50', N'880')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (19, N'BARBADOS', N'Barbados', N'BB', N'BRB', N'52', N'1246')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (20, N'BELARUS', N'Belarus', N'BY', N'BLR', N'112', N'375')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (21, N'BELGIUM', N'Belgium', N'BE', N'BEL', N'56', N'32')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (22, N'BELIZE', N'Belize', N'BZ', N'BLZ', N'84', N'501')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (23, N'BENIN', N'Benin', N'BJ', N'BEN', N'204', N'229')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (24, N'BERMUDA', N'Bermuda', N'BM', N'BMU', N'60', N'1441')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (25, N'BHUTAN', N'Bhutan', N'BT', N'BTN', N'64', N'975')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (26, N'BOLIVIA', N'Bolivia', N'BO', N'BOL', N'68', N'591')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (27, N'BOSNIA AND HERZEGOVINA', N'Bosnia and Herzegovina', N'BA', N'BIH', N'70', N'387')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (28, N'BOTSWANA', N'Botswana', N'BW', N'BWA', N'72', N'267')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (30, N'BRAZIL', N'Brazil', N'BR', N'BRA', N'76', N'55')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (32, N'BRUNEI DARUSSALAM', N'Brunei Darussalam', N'BN', N'BRN', N'96', N'673')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (33, N'BULGARIA', N'Bulgaria', N'BG', N'BGR', N'100', N'359')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (34, N'BURKINA FASO', N'Burkina Faso', N'BF', N'BFA', N'854', N'226')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (35, N'BURUNDI', N'Burundi', N'BI', N'BDI', N'108', N'257')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (36, N'CAMBODIA', N'Cambodia', N'KH', N'KHM', N'116', N'855')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (37, N'CAMEROON', N'Cameroon', N'CM', N'CMR', N'120', N'237')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (38, N'CANADA', N'Canada', N'CA', N'CAN', N'124', N'1')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (39, N'CAPE VERDE', N'Cape Verde', N'CV', N'CPV', N'132', N'238')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (40, N'CAYMAN ISLANDS', N'Cayman Islands', N'KY', N'CYM', N'136', N'1345')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (41, N'CENTRAL AFRICAN REPUBLIC', N'Central African Republic', N'CF', N'CAF', N'140', N'236')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (42, N'CHAD', N'Chad', N'TD', N'TCD', N'148', N'235')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (43, N'CHILE', N'Chile', N'CL', N'CHL', N'152', N'56')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (44, N'CHINA', N'China', N'CN', N'CHN', N'156', N'86')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (47, N'COLOMBIA', N'Colombia', N'CO', N'COL', N'170', N'57')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (48, N'COMOROS', N'Comoros', N'KM', N'COM', N'174', N'269')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (49, N'CONGO', N'Congo', N'CG', N'COG', N'178', N'242')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (50, N'CONGO, THE DEMOCRATIC REPUBLIC OF THE', N'Congo, the Democratic Republic of the', N'CD', N'COD', N'180', N'243')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (51, N'COOK ISLANDS', N'Cook Islands', N'CK', N'COK', N'184', N'682')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (52, N'COSTA RICA', N'Costa Rica', N'CR', N'CRI', N'188', N'506')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (53, N'COTE D''IVOIRE', N'Cote D''Ivoire', N'CI', N'CIV', N'384', N'225')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (54, N'CROATIA', N'Croatia', N'HR', N'HRV', N'191', N'385')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (55, N'CUBA', N'Cuba', N'CU', N'CUB', N'192', N'53')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (56, N'CYPRUS', N'Cyprus', N'CY', N'CYP', N'196', N'357')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (57, N'CZECH REPUBLIC', N'Czech Republic', N'CZ', N'CZE', N'203', N'420')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (58, N'DENMARK', N'Denmark', N'DK', N'DNK', N'208', N'45')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (59, N'DJIBOUTI', N'Djibouti', N'DJ', N'DJI', N'262', N'253')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (60, N'DOMINICA', N'Dominica', N'DM', N'DMA', N'212', N'1767')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (61, N'DOMINICAN REPUBLIC', N'Dominican Republic', N'DO', N'DOM', N'214', N'1809')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (62, N'ECUADOR', N'Ecuador', N'EC', N'ECU', N'218', N'593')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (63, N'EGYPT', N'Egypt', N'EG', N'EGY', N'818', N'20')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (64, N'EL SALVADOR', N'El Salvador', N'SV', N'SLV', N'222', N'503')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (65, N'EQUATORIAL GUINEA', N'Equatorial Guinea', N'GQ', N'GNQ', N'226', N'240')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (66, N'ERITREA', N'Eritrea', N'ER', N'ERI', N'232', N'291')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (67, N'ESTONIA', N'Estonia', N'EE', N'EST', N'233', N'372')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (68, N'ETHIOPIA', N'Ethiopia', N'ET', N'ETH', N'231', N'251')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (69, N'FALKLAND ISLANDS (MALVINAS)', N'Falkland Islands (Malvinas)', N'FK', N'FLK', N'238', N'500')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (70, N'FAROE ISLANDS', N'Faroe Islands', N'FO', N'FRO', N'234', N'298')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (71, N'FIJI', N'Fiji', N'FJ', N'FJI', N'242', N'679')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (72, N'FINLAND', N'Finland', N'FI', N'FIN', N'246', N'358')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (73, N'FRANCE', N'France', N'FR', N'FRA', N'250', N'33')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (74, N'FRENCH GUIANA', N'French Guiana', N'GF', N'GUF', N'254', N'594')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (75, N'FRENCH POLYNESIA', N'French Polynesia', N'PF', N'PYF', N'258', N'689')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (77, N'GABON', N'Gabon', N'GA', N'GAB', N'266', N'241')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (78, N'GAMBIA', N'Gambia', N'GM', N'GMB', N'270', N'220')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (79, N'GEORGIA', N'Georgia', N'GE', N'GEO', N'268', N'995')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (80, N'GERMANY', N'Germany', N'DE', N'DEU', N'276', N'49')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (81, N'GHANA', N'Ghana', N'GH', N'GHA', N'288', N'233')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (82, N'GIBRALTAR', N'Gibraltar', N'GI', N'GIB', N'292', N'350')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (83, N'GREECE', N'Greece', N'GR', N'GRC', N'300', N'30')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (84, N'GREENLAND', N'Greenland', N'GL', N'GRL', N'304', N'299')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (85, N'GRENADA', N'Grenada', N'GD', N'GRD', N'308', N'1473')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (86, N'GUADELOUPE', N'Guadeloupe', N'GP', N'GLP', N'312', N'590')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (87, N'GUAM', N'Guam', N'GU', N'GUM', N'316', N'1671')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (88, N'GUATEMALA', N'Guatemala', N'GT', N'GTM', N'320', N'502')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (89, N'GUINEA', N'Guinea', N'GN', N'GIN', N'324', N'224')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (90, N'GUINEA-BISSAU', N'Guinea-Bissau', N'GW', N'GNB', N'624', N'245')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (91, N'GUYANA', N'Guyana', N'GY', N'GUY', N'328', N'592')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (92, N'HAITI', N'Haiti', N'HT', N'HTI', N'332', N'509')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (94, N'HOLY SEE (VATICAN CITY STATE)', N'Holy See (Vatican City State)', N'VA', N'VAT', N'336', N'39')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (95, N'HONDURAS', N'Honduras', N'HN', N'HND', N'340', N'504')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (96, N'HONG KONG', N'Hong Kong', N'HK', N'HKG', N'344', N'852')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (97, N'HUNGARY', N'Hungary', N'HU', N'HUN', N'348', N'36')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (98, N'ICELAND', N'Iceland', N'IS', N'ISL', N'352', N'354')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (99, N'INDIA', N'India', N'IN', N'IND', N'356', N'91')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (100, N'INDONESIA', N'Indonesia', N'ID', N'IDN', N'360', N'62')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (101, N'IRAN, ISLAMIC REPUBLIC OF', N'Iran, Islamic Republic of', N'IR', N'IRN', N'364', N'98')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (102, N'IRAQ', N'Iraq', N'IQ', N'IRQ', N'368', N'964')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (103, N'IRELAND', N'Ireland', N'IE', N'IRL', N'372', N'353')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (104, N'ISRAEL', N'Israel', N'IL', N'ISR', N'376', N'972')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (105, N'ITALY', N'Italy', N'IT', N'ITA', N'380', N'39')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (106, N'JAMAICA', N'Jamaica', N'JM', N'JAM', N'388', N'1876')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (107, N'JAPAN', N'Japan', N'JP', N'JPN', N'392', N'81')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (108, N'JORDAN', N'Jordan', N'JO', N'JOR', N'400', N'962')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (109, N'KAZAKHSTAN', N'Kazakhstan', N'KZ', N'KAZ', N'398', N'7')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (110, N'KENYA', N'Kenya', N'KE', N'KEN', N'404', N'254')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (111, N'KIRIBATI', N'Kiribati', N'KI', N'KIR', N'296', N'686')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (112, N'KOREA, DEMOCRATIC PEOPLE''S REPUBLIC OF', N'Korea, Democratic People''s Republic of', N'KP', N'PRK', N'408', N'850')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (113, N'KOREA, REPUBLIC OF', N'Korea, Republic of', N'KR', N'KOR', N'410', N'82')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (114, N'KUWAIT', N'Kuwait', N'KW', N'KWT', N'414', N'965')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (115, N'KYRGYZSTAN', N'Kyrgyzstan', N'KG', N'KGZ', N'417', N'996')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (116, N'LAO PEOPLE''S DEMOCRATIC REPUBLIC', N'Lao People''s Democratic Republic', N'LA', N'LAO', N'418', N'856')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (117, N'LATVIA', N'Latvia', N'LV', N'LVA', N'428', N'371')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (118, N'LEBANON', N'Lebanon', N'LB', N'LBN', N'422', N'961')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (119, N'LESOTHO', N'Lesotho', N'LS', N'LSO', N'426', N'266')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (120, N'LIBERIA', N'Liberia', N'LR', N'LBR', N'430', N'231')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (121, N'LIBYAN ARAB JAMAHIRIYA', N'Libyan Arab Jamahiriya', N'LY', N'LBY', N'434', N'218')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (122, N'LIECHTENSTEIN', N'Liechtenstein', N'LI', N'LIE', N'438', N'423')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (123, N'LITHUANIA', N'Lithuania', N'LT', N'LTU', N'440', N'370')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (124, N'LUXEMBOURG', N'Luxembourg', N'LU', N'LUX', N'442', N'352')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (125, N'MACAO', N'Macao', N'MO', N'MAC', N'446', N'853')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (126, N'MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF', N'Macedonia, the Former Yugoslav Republic of', N'MK', N'MKD', N'807', N'389')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (127, N'MADAGASCAR', N'Madagascar', N'MG', N'MDG', N'450', N'261')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (128, N'MALAWI', N'Malawi', N'MW', N'MWI', N'454', N'265')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (129, N'MALAYSIA', N'Malaysia', N'MY', N'MYS', N'458', N'60')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (130, N'MALDIVES', N'Maldives', N'MV', N'MDV', N'462', N'960')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (131, N'MALI', N'Mali', N'ML', N'MLI', N'466', N'223')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (132, N'MALTA', N'Malta', N'MT', N'MLT', N'470', N'356')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (133, N'MARSHALL ISLANDS', N'Marshall Islands', N'MH', N'MHL', N'584', N'692')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (134, N'MARTINIQUE', N'Martinique', N'MQ', N'MTQ', N'474', N'596')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (135, N'MAURITANIA', N'Mauritania', N'MR', N'MRT', N'478', N'222')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (136, N'MAURITIUS', N'Mauritius', N'MU', N'MUS', N'480', N'230')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (138, N'MEXICO', N'Mexico', N'MX', N'MEX', N'484', N'52')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (139, N'MICRONESIA, FEDERATED STATES OF', N'Micronesia, Federated States of', N'FM', N'FSM', N'583', N'691')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (140, N'MOLDOVA, REPUBLIC OF', N'Moldova, Republic of', N'MD', N'MDA', N'498', N'373')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (141, N'MONACO', N'Monaco', N'MC', N'MCO', N'492', N'377')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (142, N'MONGOLIA', N'Mongolia', N'MN', N'MNG', N'496', N'976')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (143, N'MONTSERRAT', N'Montserrat', N'MS', N'MSR', N'500', N'1664')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (144, N'MOROCCO', N'Morocco', N'MA', N'MAR', N'504', N'212')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (145, N'MOZAMBIQUE', N'Mozambique', N'MZ', N'MOZ', N'508', N'258')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (146, N'MYANMAR', N'Myanmar', N'MM', N'MMR', N'104', N'95')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (147, N'NAMIBIA', N'Namibia', N'NA', N'NAM', N'516', N'264')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (148, N'NAURU', N'Nauru', N'NR', N'NRU', N'520', N'674')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (149, N'NEPAL', N'Nepal', N'NP', N'NPL', N'524', N'977')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (150, N'NETHERLANDS', N'Netherlands', N'NL', N'NLD', N'528', N'31')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (151, N'NETHERLANDS ANTILLES', N'Netherlands Antilles', N'AN', N'ANT', N'530', N'599')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (152, N'NEW CALEDONIA', N'New Caledonia', N'NC', N'NCL', N'540', N'687')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (153, N'NEW ZEALAND', N'New Zealand', N'NZ', N'NZL', N'554', N'64')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (154, N'NICARAGUA', N'Nicaragua', N'NI', N'NIC', N'558', N'505')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (155, N'NIGER', N'Niger', N'NE', N'NER', N'562', N'227')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (156, N'NIGERIA', N'Nigeria', N'NG', N'NGA', N'566', N'234')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (157, N'NIUE', N'Niue', N'NU', N'NIU', N'570', N'683')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (158, N'NORFOLK ISLAND', N'Norfolk Island', N'NF', N'NFK', N'574', N'672')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (159, N'NORTHERN MARIANA ISLANDS', N'Northern Mariana Islands', N'MP', N'MNP', N'580', N'1670')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (160, N'NORWAY', N'Norway', N'NO', N'NOR', N'578', N'47')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (161, N'OMAN', N'Oman', N'OM', N'OMN', N'512', N'968')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (162, N'PAKISTAN', N'Pakistan', N'PK', N'PAK', N'586', N'92')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (163, N'PALAU', N'Palau', N'PW', N'PLW', N'585', N'680')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (165, N'PANAMA', N'Panama', N'PA', N'PAN', N'591', N'507')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (166, N'PAPUA NEW GUINEA', N'Papua New Guinea', N'PG', N'PNG', N'598', N'675')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (167, N'PARAGUAY', N'Paraguay', N'PY', N'PRY', N'600', N'595')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (168, N'PERU', N'Peru', N'PE', N'PER', N'604', N'51')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (169, N'PHILIPPINES', N'Philippines', N'PH', N'PHL', N'608', N'63')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (170, N'PITCAIRN', N'Pitcairn', N'PN', N'PCN', N'612', N'0')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (171, N'POLAND', N'Poland', N'PL', N'POL', N'616', N'48')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (172, N'PORTUGAL', N'Portugal', N'PT', N'PRT', N'620', N'351')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (173, N'PUERTO RICO', N'Puerto Rico', N'PR', N'PRI', N'630', N'1787')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (174, N'QATAR', N'Qatar', N'QA', N'QAT', N'634', N'974')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (175, N'REUNION', N'Reunion', N'RE', N'REU', N'638', N'262')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (176, N'ROMANIA', N'Romania', N'RO', N'ROM', N'642', N'40')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (177, N'RUSSIAN FEDERATION', N'Russian Federation', N'RU', N'RUS', N'643', N'7')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (178, N'RWANDA', N'Rwanda', N'RW', N'RWA', N'646', N'250')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (179, N'SAINT HELENA', N'Saint Helena', N'SH', N'SHN', N'654', N'290')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (180, N'SAINT KITTS AND NEVIS', N'Saint Kitts and Nevis', N'KN', N'KNA', N'659', N'1869')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (181, N'SAINT LUCIA', N'Saint Lucia', N'LC', N'LCA', N'662', N'1758')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (182, N'SAINT PIERRE AND MIQUELON', N'Saint Pierre and Miquelon', N'PM', N'SPM', N'666', N'508')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (183, N'SAINT VINCENT AND THE GRENADINES', N'Saint Vincent and the Grenadines', N'VC', N'VCT', N'670', N'1784')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (184, N'SAMOA', N'Samoa', N'WS', N'WSM', N'882', N'684')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (185, N'SAN MARINO', N'San Marino', N'SM', N'SMR', N'674', N'378')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (186, N'SAO TOME AND PRINCIPE', N'Sao Tome and Principe', N'ST', N'STP', N'678', N'239')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (187, N'SAUDI ARABIA', N'Saudi Arabia', N'SA', N'SAU', N'682', N'966')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (188, N'SENEGAL', N'Senegal', N'SN', N'SEN', N'686', N'221')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (190, N'SEYCHELLES', N'Seychelles', N'SC', N'SYC', N'690', N'248')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (191, N'SIERRA LEONE', N'Sierra Leone', N'SL', N'SLE', N'694', N'232')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (192, N'SINGAPORE', N'Singapore', N'SG', N'SGP', N'702', N'65')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (193, N'SLOVAKIA', N'Slovakia', N'SK', N'SVK', N'703', N'421')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (194, N'SLOVENIA', N'Slovenia', N'SI', N'SVN', N'705', N'386')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (195, N'SOLOMON ISLANDS', N'Solomon Islands', N'SB', N'SLB', N'90', N'677')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (196, N'SOMALIA', N'Somalia', N'SO', N'SOM', N'706', N'252')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (197, N'SOUTH AFRICA', N'South Africa', N'ZA', N'ZAF', N'710', N'27')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (199, N'SPAIN', N'Spain', N'ES', N'ESP', N'724', N'34')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (200, N'SRI LANKA', N'Sri Lanka', N'LK', N'LKA', N'144', N'94')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (201, N'SUDAN', N'Sudan', N'SD', N'SDN', N'736', N'249')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (202, N'SURINAME', N'Suriname', N'SR', N'SUR', N'740', N'597')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (203, N'SVALBARD AND JAN MAYEN', N'Svalbard and Jan Mayen', N'SJ', N'SJM', N'744', N'47')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (204, N'SWAZILAND', N'Swaziland', N'SZ', N'SWZ', N'748', N'268')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (205, N'SWEDEN', N'Sweden', N'SE', N'SWE', N'752', N'46')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (206, N'SWITZERLAND', N'Switzerland', N'CH', N'CHE', N'756', N'41')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (207, N'SYRIAN ARAB REPUBLIC', N'Syrian Arab Republic', N'SY', N'SYR', N'760', N'963')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (208, N'TAIWAN, PROVINCE OF CHINA', N'Taiwan, Province of China', N'TW', N'TWN', N'158', N'886')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (209, N'TAJIKISTAN', N'Tajikistan', N'TJ', N'TJK', N'762', N'992')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (210, N'TANZANIA, UNITED REPUBLIC OF', N'Tanzania, United Republic of', N'TZ', N'TZA', N'834', N'255')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (211, N'THAILAND', N'Thailand', N'TH', N'THA', N'764', N'66')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (213, N'TOGO', N'Togo', N'TG', N'TGO', N'768', N'228')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (214, N'TOKELAU', N'Tokelau', N'TK', N'TKL', N'772', N'690')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (215, N'TONGA', N'Tonga', N'TO', N'TON', N'776', N'676')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (216, N'TRINIDAD AND TOBAGO', N'Trinidad and Tobago', N'TT', N'TTO', N'780', N'1868')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (217, N'TUNISIA', N'Tunisia', N'TN', N'TUN', N'788', N'216')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (218, N'TURKEY', N'Turkey', N'TR', N'TUR', N'792', N'90')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (219, N'TURKMENISTAN', N'Turkmenistan', N'TM', N'TKM', N'795', N'7370')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (220, N'TURKS AND CAICOS ISLANDS', N'Turks and Caicos Islands', N'TC', N'TCA', N'796', N'1649')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (221, N'TUVALU', N'Tuvalu', N'TV', N'TUV', N'798', N'688')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (222, N'UGANDA', N'Uganda', N'UG', N'UGA', N'800', N'256')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (223, N'UKRAINE', N'Ukraine', N'UA', N'UKR', N'804', N'380')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (224, N'UNITED ARAB EMIRATES', N'United Arab Emirates', N'AE', N'ARE', N'784', N'971')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (225, N'UNITED KINGDOM', N'United Kingdom', N'GB', N'GBR', N'826', N'44')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (226, N'UNITED STATES', N'United States', N'US', N'USA', N'840', N'1')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (228, N'URUGUAY', N'Uruguay', N'UY', N'URY', N'858', N'598')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (229, N'UZBEKISTAN', N'Uzbekistan', N'UZ', N'UZB', N'860', N'998')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (230, N'VANUATU', N'Vanuatu', N'VU', N'VUT', N'548', N'678')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (231, N'VENEZUELA', N'Venezuela', N'VE', N'VEN', N'862', N'58')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (232, N'VIET NAM', N'Viet Nam', N'VN', N'VNM', N'704', N'84')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (233, N'VIRGIN ISLANDS, BRITISH', N'Virgin Islands, British', N'VG', N'VGB', N'92', N'1284')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (234, N'VIRGIN ISLANDS, U.S.', N'Virgin Islands, U.s.', N'VI', N'VIR', N'850', N'1340')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (235, N'WALLIS AND FUTUNA', N'Wallis and Futuna', N'WF', N'WLF', N'876', N'681')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (236, N'WESTERN SAHARA', N'Western Sahara', N'EH', N'ESH', N'732', N'212')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (237, N'YEMEN', N'Yemen', N'YE', N'YEM', N'887', N'967')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (238, N'ZAMBIA', N'Zambia', N'ZM', N'ZMB', N'894', N'260')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (239, N'ZIMBABWE', N'Zimbabwe', N'ZW', N'ZWE', N'716', N'263')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (240, N'SERBIA', N'Serbia', N'RS', N'SRB', N'688', N'381')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (241, N'ASIA PACIFIC REGION', N'Asia / Pacific Region', N'AP', N'0  ', N'0', N'0')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (242, N'MONTENEGRO', N'Montenegro', N'ME', N'MNE', N'499', N'382')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (243, N'ALAND ISLANDS', N'Aland Islands', N'AX', N'ALA', N'248', N'358')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (244, N'BONAIRE, SINT EUSTATIUS AND SABA', N'Bonaire, Sint Eustatius and Saba', N'BQ', N'BES', N'535', N'599')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (245, N'CURACAO', N'Curacao', N'CW', N'CUW', N'531', N'599')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (246, N'GUERNSEY', N'Guernsey', N'GG', N'GGY', N'831', N'44')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (247, N'ISLE OF MAN', N'Isle of Man', N'IM', N'IMN', N'833', N'44')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (248, N'JERSEY', N'Jersey', N'JE', N'JEY', N'832', N'44')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (249, N'KOSOVO', N'Kosovo', N'XK', N'---', N'0', N'381')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (250, N'SAINT BARTHELEMY', N'Saint Barthelemy', N'BL', N'BLM', N'652', N'590')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (251, N'SAINT MARTIN', N'Saint Martin', N'MF', N'MAF', N'663', N'590')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (252, N'SINT MAARTEN', N'Sint Maarten', N'SX', N'SXM', N'534', N'1')
+GO
+INSERT [dbo].[Country] ([Id], [Name], [NiceName], [ISO], [Iso3], [NumCode], [PhoneCode]) VALUES (253, N'SOUTH SUDAN', N'South Sudan', N'SS', N'SSD', N'728', N'211')
+GO
+SET IDENTITY_INSERT [dbo].[Country] OFF
+GO
+SET IDENTITY_INSERT [dbo].[City] ON 
+
+GO
+INSERT [dbo].[City] ([Id], [Name], [CountryId], [Deleted]) VALUES (1, N'Singapore', 192, 0)
+GO
+SET IDENTITY_INSERT [dbo].[City] OFF
+GO
+SET IDENTITY_INSERT [dbo].[CookingStyle] ON 
+
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (5, N'cdefa786-9367-4250-a2a5-49419c2fa11f', N'Deep frying', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (6, N'67e3a3b4-3c07-4324-9686-108e34d6e13d', N'Egg wash', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (7, N'1900caab-3502-41d5-a3e7-19b92e517435', N'Curdling', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (8, N'fb983a43-9133-4e05-8e5a-93d06fca2ecc', N'Casserole', N'Food cooked and served in a casserole dish. Types of casserole include ragout, hotpot, cassoulet, tajine, moussaka, shepherd''s pie, gratin, rice or macaroni timballo, and carbonnade', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (9, N'e59ba334-472d-4a60-be7d-48ed7ad0b57c', N'Charbroiling', N'A commonly used cooking device consisting of a series of grates or ribs that can be heated using a variety of means, and is used in both residential and commercial applications for a variety of cooking operations', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (10, N'7ccb186a-61d4-400b-b389-27ea0cfc7948', N'Clay pot cooking', N'A process of cooking food in a pot made from unglazed & natural clay', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (11, N'f97f11e1-cc4b-4644-98be-7225fcc10484', N'Confit', N'Confit as a cooking term describes when food is cooked in grease, oil or sugar water (syrup), at a lower temperature, as opposed to deep frying', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (12, N'f5addaad-bb7d-433b-a318-ef5788bca556', N'Cooking with alcohol', N'Cooking with alcohol as an ingredient, combusting alcohol for heat or effect, or both at the same time', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (13, N'6a0dd532-690b-4e8a-ac36-146056d14637', N'Creaming', N'Refers to several different culinary processes in baking, cooking and milk production', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (15, N'76f3243b-7a88-482b-9bd7-6c2c693c10e0', N'Dry roasting', N'Process by which heat is applied to dry foodstuffs without the use of oil or water as a carrier. Unlike other dry heat methods, dry roasting is used with foods such as nuts and seeds. Dry roasted foods are stirred as they are roasted to ensure even heating', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (16, N'507990ec-ca9a-479a-8ac5-635d1606779b', N'Flambé', N'A cooking procedure in which alcohol is added to a hot pan to create a burst of flames. The word means ''flamed'' in French.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (17, N'b8e3cda1-474e-4d80-a31b-2fc9214a4ccc', N'Flattop grill', N'Cooking appliance that resembles a griddle but performs differently because the heating element is circular rather than straight (side to side). This heating technology creates an extremely hot and even cooking surface, as heat spreads in a radial fashion over the surface.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (18, N'd84e1193-451d-4ae9-bc09-168a46298215', N'Fondue', N'Swiss dish of melted cheese served in a communal pot (caquelon or fondue pot) over a portable stove (réchaud) heated with a candle or spirit lamp, and eaten by dipping bread into the cheese using long-stemmed forks', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (19, N'b82186c5-2b12-490e-af44-fe9a64080248', N'Frying', N'Full or partial immersion cooking in hot oil or fat', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (20, N'669ef8ee-d5f2-4568-b1b1-8eabc23c4517', N'Gentle frying', N'Low-temperature frying is an oil- or fat-based cooking method used for relatively fragile or starchy foods. While gentle frying is most notably used to cook fried eggs, it is also used for delicate fish, tender cuts of meat, sausages, and as a first step in fried potatoes', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (21, N'452e6a5a-3043-4a42-9965-21ad9affe139', N'Grilling', N'Involves a significant amount of direct, radiant heat, and tends to be used for cooking meat quickly', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (22, N'aa54f528-1a1d-4f0b-8049-7ebcc91eb395', N'Microwave cooking', N'A kitchen appliance that heats and cooks food by exposing it to microwave radiation in the electromagnetic spectrum', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (23, N'6f844c22-8b94-4a0a-983c-3b0714c3b753', N'Pan frying', N'Cooking in a pan with a light coating of oil or liquid and allowing the food to brown.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (24, N'5cdf9e36-b74e-46d7-8a5a-8a3784efcf73', N'Pressure cooking', N'the process of cooking food, using water or other cooking liquid, in a sealed vessel—known as a pressure cooker, which does not permit air or liquids to escape below a pre-set pressure.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (25, N'5759251b-a3a4-409d-b1e0-de9847aef1f4', N'Pressure frying', N'Variation on pressure cooking where meat and cooking oil are brought to high temperatures while pressure is held high enough to cook the food more quickly. This leaves the meat very hot and juicy. A receptacle used in pressure frying is known as a pressure fryer', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (26, N'0fe39be9-9eb8-4536-a5cc-9aa80f6c95a8', N'Purée', N'Cooked food, usually vegetables or legumes, that has been ground, pressed, blended or sieved to the consistency of a soft creamy paste or thick liquid', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (27, N'3760bb9e-6e51-4beb-b313-fa5ac7b6a3f6', N'Red stewing', N'Red stewing is a unique Chinese cooking technique, used primarily for cooking a tougher cut of meat or poultry. Also called red cooking, red braising and flavour potting, is a slow braising Chinese cooking technique that imparts a red color to the prepared food', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (28, N'49e53e00-5268-4990-a419-f3ce78680373', N'Roasting', N'Many Chinese foods like chicken, duck, a whole sheep, a sheep''s leg, and a whole pig can be cooked in this way.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (29, N'e9f7239b-9914-4808-9348-f968fd6191d7', N'Rotisserie', N'A style of roasting where meat is skewered on a spit – a long solid rod used to hold food while it is being cooked over a fire in a fireplace or over a campfire, or roasted in an oven', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (30, N'b7d15629-a1f6-4e7e-b37d-c0667919f7a2', N'Sautéing', N'Method of cooking food that uses a small amount of oil or fat in a shallow pan over relatively high heat. Ingredients are usually cut into pieces or thinly sliced to facilitate fast cooking.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (31, N'bb6224de-9c1b-4450-b17c-0138f59e6f1a', N'Searing', N'A technique used in grilling, baking, braising, roasting, sautéing, etc., in which the surface of the food (usually meat, poultry or fish) is cooked at high temperature until a caramelized crust forms.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (32, N'4a21b232-f28c-4287-b85a-3a895c83d28f', N'Sous-vide', N'Method of cooking in which food is sealed in a vacuum-sealed plastic pouch then placed in a water bath', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (33, N'0b721f3a-acf0-47d7-8507-3efdbcb84e5e', N'Spatchcock', N'Poultry or game that has been prepared for roasting or grilling by removing the backbone, and sometimes the sternum of the bird and flattening it out before cooking.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (34, N'8397a85d-edf9-4886-bf01-ca7b32ab4502', N'Stew', N'Combination of solid food ingredients that have been cooked in liquid and served in the resultant gravy', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (35, N'c793cbc0-4aad-4cc4-8b1f-7fb274d6c376', N'Stir frying', N'Cooking ingredients at hot oil and stirring quickly to completion', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (36, N'cf841b1f-6ea6-4f20-9ffb-2a5dc9606ca3', N'Tandoor', N'A cylindrical clay or metal oven used in cooking and baking in Southern, Central and Western Asia, as well as in the Caucasus.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (37, N'73f2536b-1381-4893-88db-9664c899f4d5', N'Teriyaki', N'A cooking technique used in Japanese cuisine in which foods are broiled or grilled with a glaze of soy sauce, mirin, and sugar', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (38, N'2caca42e-a80c-4833-b0a1-dcf45e363024', N'Wok cooking', N'The wok is used in a significant amount of cooking methods.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (39, N'dd207b70-84c2-417a-8a2d-8c500d4aae8f', N'Drying', N'A food dehydrator refers to a device that removes moisture from food to aid in its preservation. A food dehydrator uses a heat source and air flow to reduce the water content of foods.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (41, N'35852d7d-37ee-48f2-8a84-1729dd43b5cd', N'Curing (food preservation)', N'Curing is any of various food preservation and flavoring processes of foods such as meat, fish and vegetables, by the addition of a combination of salt, nitrates, nitrite, or sugar', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (42, N'b8b12ebd-3790-4656-8c3b-cd9a1c179c52', N'Glaze', N'Coating of a glossy, often sweet, sometimes savoury, substance applied to food typically by dipping, dripping, or with a brush', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (43, N'f1b4f272-e32a-4a81-9507-76230030f025', N'Pasteurization', N'Process that kills microbes (mainly bacteria) in food and drink, such as milk, juice, canned food, and others', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (44, N'4b0e21d8-0b33-400e-b203-9048b817d03b', N'Pig roast', N'Barbecuing of a whole hog', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (45, N'2e18f447-2b96-4dc0-803c-6c36d0fede81', N'Shallow frying', N'An oil-based cooking technique. It is typically used to prepare portion-sized cuts of meat and fish, and patties such as fritters', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (46, N'f70bdd61-5748-4316-978b-7a7742588b44', N'Simmering', N'Adding ingredients to cold water along with seasonings and allowing the contents to slowly come to a prolonged simmering boil. This is known in English as double steaming due to the vessels commonly used for this cooking method. The term is also used in Chinese for the Western cooking technique of stewing and brewing herbal remedies of Traditional Chinese medicine.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (47, N'8bd41ab8-9dea-489d-a1a5-0b32f24dca28', N'Smoking (cooking)', N'Cooking in direct heat with Smoke. The source of the smoke is typically sugar or tea.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (48, N'20f1e3bd-7e98-4bc4-b396-810fd1a97440', N'Steaming', N'Steaming food to completion over boiling water.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (49, N'b3515f09-5ecd-4715-81b5-b4ac775b8ba3', N'Stuffing', N'an edible food mixture, often a starch, used to fill a cavity in another food item', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (50, N'352d0e6d-e00d-4c80-84c1-598a1a793c43', N'Tempering (cooking)', N'bringing meat to room temperature before cooking; or bringing food up to temperature slowly as in sous vide', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (51, N'6ffe1752-0010-4194-b420-1b75df22a500', N'Scalding', N'Par cooking through quick immersion of raw ingredients in boiling water or broth sometimes followed by immersion in cold water.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (52, N'20ed1855-f2a0-4008-901a-7a380b3a8db5', N'Decoction', N'Cooking slowly to extract nutrients into the simmering liquid, used to describe the brewing process in Chinese herbology with the intention of using only the decocted brew.', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (53, N'7b4bda77-3598-4fdd-a003-9cc4662398d7', N'Caramelization', N'The browning of sugar, a process used extensively in cooking for the resulting nutty flavor and brown color', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (54, N'274e3d73-eec7-405b-b760-0dec8383685f', N'Cold dish', N'NA', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (55, N'0c212968-8d56-4add-aee2-c2f05b05c73e', N'Fry', N'NA', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (56, N'6a57f6bb-940e-432c-b9a8-61e404dd2788', N'Marination', N'NA', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (57, N'a978be43-5dbf-44bf-bc01-4e54f8d029da', N'Soup-based', N'NA', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (58, N'4ad8a9e1-4b9a-48fd-b257-a2c3f0417f3b', N'Braised', N'NA', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (59, N'56b91af8-4504-44bb-bc2d-a11afb1f9744', N'Dessert', N'NA', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (60, N'21ff4dde-7951-4576-856b-424b1d9ace80', N'Drinks', N'NA', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (61, N'705474c1-6275-40a1-ba12-8be4d5d6e9a8', N'Sandwich', N'NA', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (62, N'463b480d-3e55-4b1b-b742-8ba6ef992cc6', N'hot hot', N'pot pot', 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (67, N'0a551920-85b7-49b0-a83b-5741b7035ef2', N'fried', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (68, N'cdec9eb2-8f71-4505-9e7a-6dff552aaa1d', N'salad', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (69, N'a6de3897-564f-4c41-b0bb-6e3835f1cb57', N'Baked', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (70, N'f3e6f475-a5eb-446a-a3d5-97b66d0462c2', N'Waffles Iron', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (71, N'0ce6bd8f-041a-477a-aded-837ee41609c8', N'Toasted', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (72, N'02d96853-bcc6-4f1d-a946-6d1c5ccc4272', N'Scrambled', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (73, N'508baeda-8291-48d1-987f-46d919851783', N'Roasted', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (74, N'b69b4c98-e242-4d91-ae50-944416e83d01', N'Grilled', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (75, N'7d222dbc-1f79-4554-a2e2-e64b43ff8ed3', N'Steam', NULL, 0)
+GO
+INSERT [dbo].[CookingStyle] ([Id], [GuId], [Name], [Description], [Deleted]) VALUES (76, N'ebb69631-11ef-49a5-807f-df21e17808be', N'Frie', NULL, 0)
+GO
+SET IDENTITY_INSERT [dbo].[CookingStyle] OFF
+GO
+SET IDENTITY_INSERT [dbo].[CuisineType] ON 
+
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (4, N'8a1318a1-34c1-44e9-b373-c173b0aab968', N'British', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (9, N'2e1d146b-303a-4205-9acc-e1f7040554b4', N'Chinese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (10, N'1e76516e-3647-4fbb-8fb9-20e4d36a00e7', N'Indian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (11, N'f2509d6b-e6fe-4334-ba81-fc5e0d0cf484', N'American', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (12, N'1111ce24-7362-4058-bb39-11a96464e5e8', N'Australian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (13, N'eb28ccbc-ed4b-41c4-ae8f-ace659675131', N'Austrian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (14, N'e21ce052-6c48-4570-b50c-d6edb2d7a29b', N'Bar', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (15, N'ab70ea0a-ff13-4995-9927-1b5d0b358ebd', N'Barbecue', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (16, N'ec0a05ce-d7d1-40e5-8fd5-03a44f3c1e56', N'Beer', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (17, N'8345bc73-ec57-4cdd-87c0-d4a42e848bfd', N'Beijing', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (18, N'd44a4cf9-9fca-4dad-a848-7a0efd89c974', N'Brazilian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (20, N'32210884-471c-4790-8c16-bdd2b5f3a78e', N'Buffet', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (21, N'a564b261-c29a-486c-86ae-fe5adf34e23b', N'Cafe', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (22, N'8b5b4a7d-1482-4924-a398-fe3f3ead76b5', N'Cajun', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (23, N'968131dd-fccb-4906-a3a0-ddffefb71725', N'Cajun/Creole', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (24, N'f857c2e5-272f-4df1-bf3e-c1598670b4e7', N'Cantonese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (25, N'6d8aad5c-b215-435c-9111-6d19ce581f5a', N'Caribbean', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (27, N'16350fe4-8c86-48d7-aded-b3114b328dea', N'Cocktails', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (28, N'e99d2065-b244-42e4-a7f2-dfe74328d4af', N'Cuban', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (29, N'03d44960-4dea-48fa-ac3e-352bd882eae6', N'Desserts', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (30, N'ec9f3f8b-c71f-4a4b-b03f-2b9144415acd', N'Dim Sum', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (31, N'4847c85c-e7ee-4daa-a42c-848974658c06', N'Drinks', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (32, N'ccafdf64-f02c-441f-a286-949780913ec3', N'English', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (33, N'527ea2d4-c205-423b-b05f-79ad691e23b2', N'European', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (34, N'8437509c-5675-46d1-a760-e0eed634b15a', N'Filipino', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (35, N'6259f830-f6a7-47ab-bc1b-09951b192c93', N'French', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (36, N'9f252402-152b-48cf-9823-dcb03cdaf64b', N'Fruits & Drinks', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (37, N'5fd9532d-35bd-4820-bc4f-db54c00526d1', N'Fusion', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (38, N'd82e9846-9d4f-4fd7-9f5b-8800e7a4150e', N'German', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (39, N'8604db8b-a5da-4552-925c-8fe3fbdeda54', N'Greek', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (40, N'10708ea2-c740-49af-8313-84e09ef42d3c', N'Halal Certified', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (41, N'c4e6388d-1ed8-4026-82f8-fc724f8629dc', N'Hokkien', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (42, N'7cf07c96-03e2-40ea-88d1-a0d370810f13', N'Hong Kong', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (43, N'b0c5b046-9cf1-4867-8ac0-aec0b4f7fe2d', N'Hunan', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (45, N'fc2868fa-b9b5-4863-be4c-c560508090fa', N'Indochinese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (46, N'3ebc71ca-5017-4382-902b-eaab323b4db3', N'Indonesian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (47, N'd7779a2b-8578-443a-9e53-ab77007c5b6c', N'International', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (48, N'df04b90e-edb8-46ab-8097-976d83740cb6', N'Iranian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (49, N'd981d54a-64f1-4778-ab09-e1962192a8fa', N'Italian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (50, N'221138a6-06eb-4a79-a422-2a8842b7306c', N'Japanese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (51, N'ba8c9875-5701-45c8-bc69-572032829b99', N'Juices', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (52, N'949e754e-e90f-4df7-a96c-56de91d51666', N'Korean', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (53, N'0eaaa7de-f8ad-4368-a284-75950cda6ee6', N'Latin American', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (54, N'b94e954d-abee-4421-a8e6-ec9ea5f7b60c', N'Lebanese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (55, N'ae789283-1b12-4ca3-85c5-8b798ab047d2', N'Local', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (56, N'ddb873e8-6a2c-4dab-b805-d543a9353e11', N'Malaysian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (57, N'ce2b37d1-5ad2-43ff-943c-2cd819e96fa3', N'Mediterranean', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (58, N'a246919a-0f68-479b-963e-28278a2fed8f', N'Mexican', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (59, N'035736fb-f3e1-4343-9798-fca5bf5b3728', N'Middle Eastern', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (60, N'de246e14-bc1c-421a-a0f2-dd8a37c4f3ee', N'Modern European', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (61, N'97fd185d-4001-486a-9f54-7e65c9e62a0e', N'Moroccan', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (62, N'1fa3e11a-8426-4603-b7d2-02c72db9e779', N'Nepalese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (63, N'2334c282-d11e-4caa-8f68-2be76597ba75', N'New Zealand', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (64, N'13e78318-55c1-4859-896e-5a91dfe13a02', N'Nonya', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (65, N'432554f3-2b78-4a30-8a1d-e83c33cfc768', N'North Indian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (66, N'6f568064-53f3-410d-bc4c-dc53ff825a54', N'Peranakan', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (67, N'04f1afe3-110c-4264-b7a2-1375eed2d54c', N'Persian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (68, N'99940cc7-c0f3-475b-9b62-4fa1397484e7', N'Pizza', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (69, N'4bc70c5c-6d57-4b69-8020-ebaf5a6937a6', N'Portuguese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (70, N'8d1dd73b-cb71-4258-bb66-470c521ca73c', N'Russian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (71, N'5054438a-6662-4cf8-ae81-c38a47a2b941', N'Scottish', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (72, N'7d7a432d-fac3-4852-9860-8ad45a0d9e87', N'Seafood', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (73, N'cf012934-187a-4ed2-8378-584b52c457ef', N'Shanghainese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (74, N'3e9f5018-5c6c-4e3a-8e8d-5f761d7f559b', N'Sichuan', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (75, N'7914c7f2-8fc8-4f3b-a358-bc28d33b72a3', N'Singaporean', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (76, N'f7d4ae39-7468-4a47-a2c4-023ba6a0175f', N'Snacks', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (77, N'7a201b59-6184-4352-9ce4-6e4f28618cfe', N'South American', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (78, N'3e853a6c-bd31-4a52-8b1d-3f90e14e1fb1', N'South Indian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (79, N'2a087043-2d2a-41b3-9cc0-b5cff43ecd5e', N'Southeast Asian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (80, N'9726f89f-ad06-41c5-81af-7bd0baa0aaab', N'Spanish', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (81, N'0e0e8a99-e060-4b6a-bd11-e4cb418bb9c1', N'Steak and Grills', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (82, N'c35cbb81-d931-47e1-83c9-27116375e314', N'Steakhouse', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (83, N'd22d129f-5aba-41ef-a6ad-97ea5d1cb51a', N'Steamboat', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (84, N'caaaa6c2-4833-4183-a159-8001dc0a20a0', N'Swedish', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (85, N'e1ff0fc2-05af-44e8-9b44-f34415f43e16', N'Swiss', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (86, N'fc1f8087-938d-4297-9a29-93720a8ea360', N'Taiwanese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (87, N'0a9fe406-a55c-4478-a1a9-462923104a0f', N'Teochew', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (88, N'4b6d148b-edc6-4a06-b834-d03774187d88', N'Thai', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (89, N'18253ce4-4f0f-40cb-8849-6859c401b527', N'Turkish', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (90, N'25093e05-53c8-4782-bf94-01e36b180339', N'Vegetarian', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (91, N'2058d8d6-4730-4c67-9911-dcf38b1c4489', N'Vegetarian Friendly', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (92, N'04fea23e-3a31-49ba-9455-9c9ffc73eb6d', N'Vietnamese', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (93, N'55ae0ea4-d413-4e32-9ce5-98c7cf01aa3d', N'Western', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (94, N'd59d5f4a-1bc2-457c-995a-0284fb0231e6', N'Wine', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (95, N'c3193f35-831f-4295-9427-d0e1d9164334', N'Wines', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (96, N'1506cb28-6a34-4633-9f6a-31cdb7a2d8a2', N'Zi Char', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (97, N'2a1f8ed9-5f44-4ceb-9735-0b82f5ccfdaa', N'Sandwich shop', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (98, N'2a1f8ed9-5f44-4ceb-9735-0b82f5ccfdaa', N'Bistro', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (99, N'9990968b-2bf8-4b1e-8b48-7aa6ad93322c', N'banglamod', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (100, N'124b7f83-1602-469e-b928-49722108f313', N'hello', 0)
+GO
+INSERT [dbo].[CuisineType] ([Id], [GuId], [Name], [Deleted]) VALUES (101, N'21cf5def-042d-4ece-aeb7-6b60a6354ec6', N'Lounge', 0)
+GO
+SET IDENTITY_INSERT [dbo].[CuisineType] OFF
+GO
+SET IDENTITY_INSERT [dbo].[DietaryCallout] ON 
+
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (5, N'3fbf779c-cc3f-4fa6-80d8-2c337408e3fc', N'For Diabetics', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (6, N'777fa1c8-ecd5-4700-b4a3-0fa6d3583b09', N'Pork', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (7, N'a34dc5a3-e5ef-4d10-9b6c-d2256d0812ee', N'Vegan', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (8, N'065245aa-af3f-4f0c-a8c8-1381b596e678', N'Vegetarian', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (9, N'a201d683-3f43-4540-aee4-dde431e81488', N'Sour', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (10, N'0fefc03b-8586-4814-9d1a-6dd708791caa', N'Halal Certified', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (11, N'95adfc64-1612-44eb-8c4b-df5da39a4b7b', N'Dairy Free', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (12, N'38d616cf-b25e-45d0-aef3-8c3cd51029c2', N'Nut-Free', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (13, N'56558385-809a-425a-8b68-3f8c05148660', N'Gluten Free', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (14, N'2d85021e-e4f5-4604-9157-03dec8ce21f4', N'Alcohol', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (15, N'b5d6d1d0-2778-4139-89bb-62ce41062518', N'Spicy', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (16, N'bc91790a-0803-42ce-bb2b-20016755cf86', N'Nuts', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (17, N'5ab84692-f460-4a4f-abdb-35b23660b2a1', N'Alfonsino', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (18, N'd51218e9-da5d-4d40-8474-07c166b707fa', N'Artichoke', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (19, N'a797ff7b-4160-4e42-aeee-842a4ea29a78', N'Dairy', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (20, N'9a1a4214-c500-42f4-8f75-07cf5de53a3a', N'Banana', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (21, N'3960b5b3-f008-4d0d-b7b0-a065ff4f5682', N'Toffee', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (22, N'a07608aa-4a37-4349-8738-e084a72bc63b', N'Shellfish', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (23, N'0eca3ab9-43aa-46eb-9f1e-877bdd8db77e', N'Caffeine ', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (24, N'359cc03e-1270-407c-9b5b-726c103db53f', N'Clams', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (25, N'eb41ea9d-bcc0-44d9-a7bc-dae552fd7120', N'Soda', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (26, N'a3036a95-164a-4d2a-98e1-98c1b6ef0472', N'Chicken', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (27, N'9ec0fe8b-948a-468a-84c4-c4a52eb235e1', N'Oil', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (28, N'e4238859-5cb6-41ff-b5d0-e5f8b10f05c8', N'Beef', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (29, N'7270e149-2020-4d41-9f0e-00635cda3463', N'Seafood', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (30, N'b8a015d2-be4e-4af1-a078-f2900c0444a4', N'Prawns', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (31, N'0f565537-eefa-4b0b-93d3-af1539eadce1', N'Parsley', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (32, N'414bc797-f9ce-43a0-bc23-ff99eed6a5dd', N'Caviar', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (33, N'ad45bf97-abad-43a0-bc2b-a2241f4061f5', N'Coriander', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (34, N'3aac0ce9-6b1d-4df9-acba-8a5765767397', N'Crabmeat', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (35, N'd0b4d59a-2fed-44b8-84f1-4991ee8d2c07', N'Mango', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (36, N'958c102c-e9ba-42be-a159-7d63c12b47ca', N'Eggs', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (37, N'76e23a07-a00b-469e-9cc7-c47d33229f7d', N'Chocolate', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (38, N'6dfbb00e-73f1-4f7c-8ed5-c97dc0d2261e', N'Pistachio', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (39, N'a7d523b9-8188-440d-aecd-34040aefd9d8', N'Cheese', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (40, N'd2ccc5be-4ef2-446e-ab05-536267010524', N'Peppers', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (41, N'e53a6bf8-3ef9-42a0-92eb-0dcea04c9015', N'Shrimps', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (42, N'd8b23eff-4cfa-4a05-b520-2ccf75d9f79a', N'Chicken Wings', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (43, N'fb98ca2c-f43f-4e83-829c-4d10dd6e80db', N'Boneless Wings', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (44, N'63bc5e95-1b52-41b6-bae1-bd95a4ec178a', N'Fries', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (45, N'42f8cf94-6f92-4e17-b3d9-cc2229865a55', N'Tortilla Chips', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (46, N'9769afc4-a939-46ee-87e1-35feffc1ec5c', N'Guacamole', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (47, N'b6264157-a440-4af0-996e-3574fd8d84ba', N'Jalapenos', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (48, N'ad4412c0-e758-440a-b36e-619750a36e58', N'Bacon', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (49, N'f891357c-49bd-4446-b4aa-1980b82aa7ad', N'Beef or Chicken', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (50, N'49b6c851-1513-430d-b1a0-6412068cf3fe', N'Mildly spicy', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (51, N'0356bd78-bf16-4054-842a-2ca7169aa159', N'BBQ sauce', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (52, N'94bd7f7d-29bf-43b3-b113-2fdbbe497329', N'Squid', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (53, N'088d03a1-2440-493a-9e01-24d3b45e101a', N'Salmon', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (54, N'ef2630e9-2c0c-48dd-b402-70b0a81ab242', N'Sweet', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (55, N'b98410c6-7b2f-46b3-8fa8-7a0c2a15a80e', N'Raw', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (56, N'03aefe29-d340-4b4a-a62c-1f94e679c2c4', N'Egg', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (57, N'06d59c16-7e22-4e3a-a02d-20a04fc13e19', N'Onion', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (58, N'dc5fc824-4373-4d52-ab1b-1ec00058f880', N'Butter', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (59, N'87659562-231e-457f-a457-063ae52d0110', N'Foie Gras', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (60, N'4300a906-e84c-49be-aa38-24943650363d', N'Truffle', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (61, N'1827bb1d-f2ef-4083-b1f5-dfe772aa061e', N'Avocado', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (62, N'f248e61c-4fe8-4e2e-8eba-c47b0d5cda57', N'Beet', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (63, N'eb9ac57b-e85d-45d4-a297-35cb4bf318d8', N'Pineapple', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (64, N'd9a6a67b-1341-4b32-9603-057c7fbbf8b8', N'Tomato', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (65, N'f98a458f-37ff-4e5b-971c-e71af7cd295f', N'Mayonnaise', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (66, N'8cba3ce6-ad22-4d24-be43-7e8f90334ce6', N'Vanilla', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (67, N'1a4a1a2f-bb6e-44f9-8289-580cefa23811', N'Strawberry', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (68, N'6bd0b120-4d7c-4261-b0a7-317b8433d690', N'Caramel', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (69, N'afccc96b-6e76-4be3-8027-05d6e90cf27a', N'Fish', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (70, N'e778cfdc-c8a3-4bb2-b034-5fb34593e745', N'Tartar', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (71, N'f82cf74a-dfbb-4032-848f-7b411cfe9878', N'Sweet Chilli', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (72, N'79643d32-4ad4-4e61-bc8d-a2731fca9c23', N'Duck', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (73, N'e47dd0ee-8eb5-409c-b77f-c3d2551cb38c', N'Herbs', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (74, N'ae90b714-665d-4b26-bae9-b7b2887969f5', N'Potato', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (75, N'5c3f5052-b910-493c-aadd-cf960cadb543', N'Honey Mustard', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (76, N'101ebd96-f075-4c32-9a15-02a9d03194e5', N'Carrot', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (77, N'f365770c-c1c5-4ef7-9445-b1a085bffbe8', N'Sweet Potato', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (78, N'88a938fb-05d6-4513-b07a-20437ea2f609', N'Spaghetti', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (79, N'b6466ab4-ef64-4bb1-a460-77be5a6beea8', N'Garlic', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (80, N'1313fd20-6876-46b6-ad1e-e3f120a08701', N'Chili Padi', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (81, N'63f4e193-0d68-441a-b08d-5a189639366d', N'White Wine', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (82, N'4ea14ae3-ef83-400c-b04b-b8ea6d862a76', N'Prawn', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (83, N'172db4b7-38d6-4e5c-999a-73a50dacf948', N'Mussels', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (84, N'f7bb3625-10a9-4baf-b1b4-16d57b19279a', N'Tom Yum', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (85, N'8e1dedfd-b39f-4837-b40c-1fe6ee9783f3', N'Linguine', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (86, N'ba8f61b4-5844-4655-ac8b-04ddc5fdacb3', N'Cherry Tomato', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (87, N'1f2e45a4-ee46-4da5-9ea7-dabe764d3f52', N'Pine Nut', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (88, N'493f1971-ca4c-4e50-b3ca-b7204cb2fb6c', N'Pesto', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (89, N'e893071f-bc42-4637-8219-b50dcccb0d1c', N'Bean Curd', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (90, N'77e4c38b-0365-47fe-a14c-02cd359fdbbe', N'Bean Sprout', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (91, N'4fdf3ced-cb35-41d3-8d1c-b6ff530964df', N'Laksa', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (92, N'f8f2c31a-6a5f-4101-b509-806b5c0a92d3', N'Vongole', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (93, N'ebaa96df-10ce-4f1e-853e-df12aa6c8942', N'Chili', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (94, N'1efd7619-e9df-4262-aceb-dd30e5a82c9e', N'Crab Meat', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (95, N'c249436f-4d53-4608-b669-afc97ba55f33', N'Parmesan Cheese', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (96, N'd6221901-6395-4042-bec7-e1979e159382', N'Cajun', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (97, N'6632163b-167c-4aae-a0e9-6dfb47b1c78f', N'Romaine Lettuce', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (98, N'b848d712-40f5-44e0-9197-b55b3f4983c0', N'Mushroom', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (99, N'84bfb1c5-6aa7-4e07-b838-9129837bb79c', N'Corn', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (100, N'019e080d-cd1f-4bf7-ad1e-81c8aefc05cc', N'Sesame', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (101, N'd63896eb-ce2a-40f8-a226-24c3542ef37d', N'Croutons', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (102, N'f16fd2fe-d8bc-4f84-9334-1c01b06d85ee', N'Nacho Cheese', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (103, N'1047e1df-9c09-4e1b-9d9f-f066522adf99', N'Honey', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (104, N'1efb43c0-11c3-41f4-b862-567cf5604d8f', N'Olive', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (105, N'57810537-72d7-423a-a828-197cea69fe28', N'Coffee', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (106, N'c25f57e8-f08a-48c3-a9ad-9781bb46c860', N'Juice', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (107, N'70b32cc1-e727-4877-b09a-9a7f54e15440', N'Soft Drink', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (108, N'f0126b2d-9933-403c-b3f4-19c546055df3', N'Tea', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (109, N'fa0386f9-1be0-4efe-bc88-3ffe4f8315ed', N'Apple', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (110, N'e793189d-27af-4f9b-9e74-4cd343187227', N'Pear', 0)
+GO
+INSERT [dbo].[DietaryCallout] ([Id], [GuId], [Name], [Deleted]) VALUES (111, N'31b9fa12-0e24-481b-ae0a-ab7d0ee0f8e6', N'Prawn Paste', 0)
+GO
+SET IDENTITY_INSERT [dbo].[DietaryCallout] OFF
+GO
+SET IDENTITY_INSERT [dbo].[DishIngredient] ON 
+
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (4, N'582fcb3a-9b3c-4056-8788-aeb318f579f7', N'Chicken', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (5, N'3b0303c1-95c8-47f9-9b14-92249700ad1a', N'Prawn', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (6, N'52163709-30cb-4ad9-9270-dcc76f754857', N'Mutton', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (7, N'512de84c-8546-4ef6-9b37-2e81b5fe333a', N'Tuna Fish', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (8, N'0d840b36-113f-47a7-8543-ad445589fdfc', N'Milk', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (9, N'0faec956-32ed-441b-839b-74f4f6245c8a', N'Jelly fish', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (10, N'0faec956-32ed-441b-839b-74f4f6245c8a', N'Cucumber', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (11, N'0faec956-32ed-441b-839b-74f4f6245c8a', N'Pork', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (12, N'0faec956-32ed-441b-839b-74f4f6245c8a', N'Beancurd', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (13, N'0faec956-32ed-441b-839b-74f4f6245c8a', N'Egg', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (14, N'0faec956-32ed-441b-839b-74f4f6245c8a', N'Tofu', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (15, N'0faec956-32ed-441b-839b-74f4f6245c8a', N'Olives', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (16, N'c470002d-d20e-486c-a35b-054bcc246046', N'Carrot cake', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (17, N'c470002d-d20e-486c-a35b-054bcc246046', N'Salted fish', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (18, N'c470002d-d20e-486c-a35b-054bcc246046', N'Water chestnut', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (19, N'd887e3a7-228f-4cdf-bdb4-b4b86a11abae', N'Duck', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (20, N'd887e3a7-228f-4cdf-bdb4-b4b86a11abae', N'Century egg', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (21, N'89462a9f-1ae8-485b-8a2a-dd3a708921b3', N'Vegetables', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (22, N'89462a9f-1ae8-485b-8a2a-dd3a708921b3', N'Ham', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (23, N'c806e9ec-a1e0-42a6-8ef1-7e08a850c41b', N'Ginger', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (24, N'c806e9ec-a1e0-42a6-8ef1-7e08a850c41b', N'Garlic', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (25, N'17ed89cb-40c0-46bd-b39b-4b3691d30b2f', N'Spare ribs', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (26, N'17ed89cb-40c0-46bd-b39b-4b3691d30b2f', N'Sugar', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (27, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Mei Cai', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (28, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Sake', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (29, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Squid', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (30, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Salted egg yolk', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (31, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Omelette', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (32, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Black truffle', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (33, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Sweet and sour', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (34, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Eggplant', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (35, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Fish', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (36, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Pomelo', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (37, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Cod fish', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (38, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Chilli', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (39, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Rice noodles', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (40, N'3c947a52-799e-4b66-b2cd-b12de2a55495', N'Bitter gourd', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (41, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Minced pork', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (42, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Kailan', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (43, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Spinach', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (44, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Di huang miao', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (45, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Pea sprout', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (52, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Noodles', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (55, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Mushrooms', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (56, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Ginseng', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (57, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Soup', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (58, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Shrimp', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (59, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Taiwan sausage', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (60, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Lemon grass', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (61, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Kamquat', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (62, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Longan', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (63, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Red date', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (64, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Lychee', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (65, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Chrysanthemum', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (66, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Jasmine tea', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (67, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Lemon', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (68, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Honey', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (69, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Drinks', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (70, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Softdrinks', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (71, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Chinese tea', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (72, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Herbal tea', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (73, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Water', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (74, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Glutinous dumpling', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (75, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Sweet potato', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (76, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Black sesame', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (77, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Osmanthus', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (78, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Pumpkin', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (79, N'11058dcd-5a45-4a23-82a2-861d2e29613c', N'Ice cream', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (80, N'2c19b219-f6d4-4cda-b35d-44521e3eabef', N'Rice', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (81, N'c9456790-9b44-463f-b1df-1162555bcdd2', N'Fruits', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (82, N'c9456790-9b44-463f-b1df-1162555bcdd2', N'Basil', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (83, N'7ad4dcec-1ad7-48e7-b243-34e6471c428d', N'Coconut', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (84, N'7ad4dcec-1ad7-48e7-b243-34e6471c428d', N'Palm sugar', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (85, N'7ad4dcec-1ad7-48e7-b243-34e6471c428d', N'Pandan', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (86, N'7ad4dcec-1ad7-48e7-b243-34e6471c428d', N'Biscuits', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (87, N'dc6e189f-88f9-4563-9b4e-c9619dbdc3b5', N'Beer', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (88, N'dc6e189f-88f9-4563-9b4e-c9619dbdc3b5', N'Wine', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (89, N'dc6e189f-88f9-4563-9b4e-c9619dbdc3b5', N'White wine', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (90, N'dc6e189f-88f9-4563-9b4e-c9619dbdc3b5', N'Red wine', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (91, N'cbcc215a-efb0-45b8-99f2-604c46c4961f', N'Bacon', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (92, N'cbcc215a-efb0-45b8-99f2-604c46c4961f', N'Turkey', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (95, N'cbcc215a-efb0-45b8-99f2-604c46c4961f', N'Meatball', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (96, N'cbcc215a-efb0-45b8-99f2-604c46c4961f', N'Cheese', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (97, N'f37be9ca-3b4f-4536-9be7-df2c523cb0b4', N'Beef', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (98, N'f37be9ca-3b4f-4536-9be7-df2c523cb0b4', N'Salami', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (99, N'f37be9ca-3b4f-4536-9be7-df2c523cb0b4', N'Pepperoni', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (100, N'0d18612a-6fa3-453b-a744-96c2c6618322', N'Sausage', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (101, N'2f48155a-cf0e-4ef8-8deb-dc171404b7e3', N'Potato chips', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (102, N'2f48155a-cf0e-4ef8-8deb-dc171404b7e3', N'Cookies', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (103, N'2f48155a-cf0e-4ef8-8deb-dc171404b7e3', N'Chocolate', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (104, N'2f48155a-cf0e-4ef8-8deb-dc171404b7e3', N'Potato', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (105, N'2f48155a-cf0e-4ef8-8deb-dc171404b7e3', N'Energy bars', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (106, N'2f48155a-cf0e-4ef8-8deb-dc171404b7e3', N'Yoghurt', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (109, N'a091245a-c33a-4e32-a4b7-0ee338b96d22', N'mangoes', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (110, N'a168622d-3a4f-4ec6-b4c3-d57f1ba87160', N'Grilled pesto chicken', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (111, N'd905d4ac-9dab-41e2-aab6-d235399d1b35', N'Sliced tomatoes', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (112, N'd21f8d73-c85d-464a-91eb-240acaf0d53a', N'Fish parmesan and mozzarella', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (113, N'09d8663b-e26c-46f6-80e7-c632e63643d1', N'Lettuce', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (114, N'f2c68100-1220-4c92-b53e-f5e0e9668c89', N'Salmon', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (115, N'2ad77609-cb2a-46c1-9193-62ed2d4301ba', N'Seaweed', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (116, N'b02e7169-2251-4c65-8a39-d35ba1211968', N'Fish Roe', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (117, N'df4b93b0-25dd-4fc1-bca0-b45795cadf3d', N'Tuna', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (118, N'8a2f7598-2085-4df7-ade6-9fd4f1f8f856', N'Swordfish', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (119, N'e85b0f62-7d2e-4f97-ab34-bd1e3a67428f', N'Wasabi', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (120, N'3c05b35d-a3ec-4380-b365-e2d16ca35bb8', N'Kale', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (121, N'321f5500-8efd-4148-a37b-35e22735f4b5', N'Oyster', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (122, N'fad68d42-7433-4e1f-800a-21a6e130150d', N'Truffle', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (123, N'da39710e-ff61-4105-9faf-8fccba3fa52e', N'Foie Gras', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (124, N'f0c38108-e7a2-48c7-bb94-209e16f29abf', N'Lobster', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (125, N'07701d9e-ce8e-4014-a61a-ab775e2c3941', N'Brandy', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (126, N'c6ec5155-aaeb-43e0-a2b1-a61a7c03cdf9', N'Burrata Cheese', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (127, N'9126d5e3-22d0-48ff-92c1-812404eb09f1', N'Tomatoes', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (128, N'bb11ce85-9f49-4506-b65d-ceff4a286f78', N'Wagyu', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (129, N'9eb8527d-484d-4906-aca8-82be98d702e9', N'Balsamic', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (130, N'52c99099-55ed-4b7e-8172-bcd59929f371', N'Endive', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (131, N'1d69b35b-b6dc-4c37-8c04-bc8091296f7b', N'Frisée', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (132, N'aadade90-889f-4e9d-a14e-dec46abedfe9', N'Crab', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (133, N'06d72161-2af3-4efb-ae3a-f466cf3c5a5f', N'Dover Sole', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (134, N'6522d2c7-42b6-43aa-bac5-2423f36c63b7', N'Potatoes', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (135, N'aca8ade3-9cd7-4b10-a9e8-83d05c3e4b87', N'Broccolini', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (136, N'57112b89-1156-4df9-ba5a-3ba1c1fb9d84', N'Guacamole', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (137, N'5d0b21e4-0609-470b-8e56-35d4e0c9eb1c', N'Onions', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (138, N'21ac965b-4023-4277-921b-8fe97518c145', N'Jam', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (139, N'7e2defd8-7619-4fbf-8a45-58ba0fa3bd37', N'Brussel Sprouts', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (140, N'160699ed-5372-44dc-9d03-c8695e137ea7', N'Asparagus', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (141, N'80bc1a10-d45a-4ae3-b0f0-f700331441bb', N'Alfonsino', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (142, N'75c408b0-5a7e-4c5d-bf17-9cbbc7f30e06', N'Artichoke', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (143, N'b7ef4533-e40a-4ee1-a0cc-08fa2c8000eb', N'Carrot', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (144, N'12fc0414-04ff-4214-82bd-b3fadae3c73b', N'Almond', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (145, N'2cb17a18-6c45-4310-8805-1281d1783235', N'brusselsprouts', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (146, N'd3d8b897-71c9-439b-b5a9-7cc3f1ff9060', N'Waffles', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (147, N'bd6696b1-835d-4c19-bd62-91657d2388cf', N'Macaroni', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (148, N'23dc5b50-8a5e-43c0-bcf8-8408bc6ace40', N'Avocado', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (149, N'00bbabbd-932c-4ac4-b4ba-f63d50dd662c', N'Clam', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (150, N'71f2081e-45c8-496b-a492-0d981b21320e', N'Feta', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (151, N'f5923029-7ccf-4b62-a865-aed0dfd6be13', N'Broccoli', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (152, N'd75a8f53-3364-4340-bc18-9782cc3ee6f8', N'Corn', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (153, N'5747c6d5-933d-4b6a-b489-1da432cc4d74', N'Agnolotti', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (154, N'367ff325-900c-478d-bc82-21591065d2de', N'Ocean Trout', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (155, N'5ddd58c7-d353-437a-90ed-61ada680db10', N'Fresh Fruits', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (156, N'de19738e-7257-4134-a357-7d4234bce4b3', N'Banana', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (157, N'5de5da36-d856-406d-932b-d7fda6abfc81', N'Toffee', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (158, N'ed98927e-747c-4e2e-8fab-4cf9102fa919', N'Granola', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (159, N'08c4f41e-e284-4a7e-a041-28a0f4ac00c6', N'Brioche Bun', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (160, N'1c60b181-af6f-4e2f-b14b-81602975c7bb', N'Pecorino Cheese', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (161, N'09c2b86d-b5d3-4bee-8683-23db711c81f2', N'Bourbon Maple Butter', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (162, N'5cc6e1e7-1502-4854-97d2-6b3b956624ce', N'Sourdough Bread', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (163, N'4f3ae262-d54b-4eec-bb14-5d9cacc5f5b2', N'Seafood', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (164, N'bc6cef3b-3bc9-404d-a07d-857148bbe483', N'Eggs', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (165, N'55e551f4-e6dd-47f5-af39-1ea125abb8a6', N'Truffled', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (166, N'40b7e606-d64e-4524-96fc-141c18272efb', N'Meat', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (167, N'0c5743af-6d1f-4122-9ef9-7f49a4051874', N'Truffles', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (168, N'cbf94e77-dd22-4124-b8d6-d750899030cc', N'Pudding', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (169, N'ac3b587b-e48a-474d-ab7e-e019eb92647b', N'Strawberries', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (170, N'507312bf-d936-486c-b027-04a238f8205a', N'Turkey Ham', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (171, N'2621ae4b-783e-4f13-ba25-e333e86d59e8', N'Turkey Salami', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (172, N'd52adc45-f714-422a-8b59-bfb64102300d', N'Mayonnaise', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (173, N'b471f34d-e6b8-4358-a59c-acbbaed98467', N'Turkey Breast', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (174, N'7c92d466-6a0e-4819-b103-d7387a314d05', N'Roast Beef', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (175, N'46fd8913-e564-4654-a9c6-a6fac8e10b17', N'Salsa', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (176, N'bb839a81-8664-46ed-948b-274796907eb6', N'Prawns', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (177, N'b476a4df-24ec-4749-8027-6f3fece193ec', N'Seabass', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (178, N'b3eb1e44-a034-44ae-b905-8fe2fd80b56d', N'Shortbread', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (179, N'7235da54-586b-4747-8026-d81de694f04a', N'Jelly', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (180, N'0ba6476d-6872-4a8a-bf96-b9cb7091e65e', N'Spices', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (181, N'e63f727b-27a2-4669-8530-5ccd5dd8b0ec', N'Chinese Plum', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (182, N'490c0754-69a9-4baa-ae76-0ec30efc3ec4', N'French Bean', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (183, N'5caf409a-8a9a-4372-bf1b-05ac4e5256d0', N'Cai Po', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (184, N'59e2d7b5-dbb1-4625-a35c-20816362f771', N'Sauce', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (185, N'56f1765b-c906-4f33-a964-3abd8bdcc19c', N'XO sauce', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (186, N'1657f874-a0f9-46de-a380-a6fc6f8b9b0e', N'Vegetable', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (187, N'e025af0d-a952-4694-91bc-e67a2162ddea', N'Bee Hoon', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (188, N'e880e8b8-4db7-4933-82dc-8579c52a502b', N'Curry Leaves', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (189, N'6a299133-fa12-4623-a88a-3f0b1cb7bef5', N'Green Tea', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (190, N'4c6189b2-3d6c-4c90-b298-da49de81ed7d', N'Tang Yuang', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (191, N'a50119d3-cf5b-49ea-9fb2-32d1b8f0d390', N'Mushroom', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (192, N'df129d05-0b41-437a-bf33-f7a0c025e751', N'Spice', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (193, N'1badb556-f4ec-4bd0-b4bc-0922729087aa', N'Broth', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (194, N'14671d58-0c14-4fbc-ab91-defedad6c112', N'Fried Rice', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (195, N'fe8e60be-15ca-411f-b8cd-d87bbebf9c09', N'Spring Onions', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (196, N'292be8bb-829a-4cc3-ae8f-7ace83e5edaf', N'Dough', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (197, N'19fa9469-8bb9-4de9-8360-af4acc8c6572', N'Salted York', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (198, N'aeb5790e-f76d-4773-9436-160416f7b8a5', N'Salted Yok', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (199, N'0a8f55b7-f92c-487e-b37b-562e248b60b0', N'Condiments', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (200, N'180487bc-144c-4714-9735-ae481b6dec09', N'Ice', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (201, N'c1b80ef2-743c-43c9-bef6-dba5a31e3dd4', N'Lemongrass', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (202, N'67c2142c-4a41-4836-bce4-d446a79f3b89', N'Sesame', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (203, N'050b57f7-4280-436f-bd1c-d6799b836155', N'Tomato', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (204, N'698f63cc-2dc2-4517-b631-5f55693cb7b0', N'Mango', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (205, N'72d1bc40-d337-49c9-a2e6-823a20e705d2', N'Icecream', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (206, N'cd5b32be-0036-45ba-a5d0-f500365a9c17', N'Noodle', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (207, N'f2b58dc4-6c44-498c-967f-60c602508810', N'Glaze', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (208, N'878949d3-1745-4777-a4be-f6ae2fa75358', N'Pasta', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (209, N'6c7350b1-be78-4407-a051-d94e9ed7cbcd', N'White Tea', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (210, N'f34fc416-020a-4ad7-b3e0-fbe4baf8d74d', N'Jasmine', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (211, N'c5f90f35-1202-42cf-b2fd-445ea2227cc5', N'Rose', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (212, N'15ab0d01-74ae-4342-b490-3fe55661cbb5', N'Pickles', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (213, N'84b4dc7e-8a5a-450e-a00f-8b4272891ed1', N'Meringue', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (214, N'2cc4eaa9-fb3f-4779-90ed-52914f632cf8', N'Cracker', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (215, N'bf9e5dad-2196-40d6-98e9-6929b0d381d7', N'Apple', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (216, N'3dffbb39-1b84-47ee-ba64-9628ed441683', N'Orange', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (217, N'47861255-59cd-44fb-9a20-887c33f48370', N'Ceylon', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (218, N'4f3cb2c7-cc90-4333-8400-57ebab2021e1', N'Black Tea', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (219, N'92baad21-9e3c-4cf5-bb53-0cceb093b8b1', N'Tarragon', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (220, N'402aad07-c0da-4a9d-9f8a-de6d4a697f34', N'Cream', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (221, N'b3f69636-44f6-4cd1-97eb-69d6405e740c', N'Soy', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (222, N'da88177a-3662-4643-831c-336bd2d7e03c', N'Relish', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (223, N'bfaefbe8-8502-4a5d-89d5-2d0a6afc3eab', N'Drink', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (224, N'87a42d8a-dab4-40e0-b2f6-9068457ad20e', N'Chilled', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (225, N'aad21275-77fc-469d-8637-f4bb1c40d574', N'Ranch Sauce', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (226, N'79ee7f50-f3d7-49ad-829c-5f19a0a8d2f8', N'Coffee', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (227, N'7841e1be-bad0-48dd-99d4-349cbafb6f5f', N'Grain', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (228, N'ce9f24c7-6d84-4c5b-aa55-a0e9f0a867ce', N'Butter', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (229, N'17416ac8-a6f5-492b-8170-9749cb0d3aac', N'Bread', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (230, N'953098f0-c5d7-4454-b345-195c34cf2ef7', N'Salt', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (231, N'71b417b2-9ed0-4717-9dfb-42de8473dfd3', N'Juice', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (232, N'0caf63fb-022c-436d-a133-3e895a27e7a9', N'Vegatables', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (233, N'35d0a854-58a1-4518-bba0-751257e89309', N'Suzette', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (234, N'39016c30-f26c-4642-9809-114ce3b99c92', N'Grand Marnier', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (235, N'881a2128-b9ad-4004-bf03-f8c6249ea823', N'Thyme', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (236, N'204def2a-d894-4b64-b29c-b91067ce686f', N'Sprinkles', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (237, N'edeebca2-eadd-440e-9a63-8c73ab7aea70', N'Hollandaise Sauce', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (238, N'9aea8e73-0fc7-4766-a8a5-7d3e34b0eecd', N'Shallots', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (239, N'141ed76f-e44b-4ebf-bae2-0424e93d2262', N'Vinaigrette', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (240, N'31579263-4dcb-4ec0-a343-d39feed48100', N'Endives', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (241, N'b1f93a8a-1ab3-4b0c-9720-63f4bfb71935', N'Strawberry', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (242, N'51d192a0-8e76-49c2-9f56-3f291570a007', N'Blueberry', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (243, N'7771646a-bf65-49bc-9c7e-5517a00a86ca', N'oil', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (244, N'8f9a399a-a264-4c2c-addf-eb6883d0f641', N'Batter', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (245, N'b7f4c197-3dfb-41d2-9ee1-b57856af6360', N'Tea', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (246, N'8c65ab9b-14da-4500-b1a3-d3487370a5ce', N'Soda', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (247, N'8df377b0-045f-4f2a-9d8a-2e051c7604e1', N'Vanilla', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (248, N'e7a92d9a-e9f9-4727-ba01-f7ab1b26449b', N'Pepper', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (249, N'c2a88bc0-79ed-444f-8396-8a7be07fcf5e', N'Brownie', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (250, N'bda91c1b-1fe4-489c-8e09-1765a0138c87', N'Cashew', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (251, N'b4c18090-d181-411e-bf27-3271bf287009', N'Hollandaise', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (252, N'3a8cb0be-b04f-42c8-abd3-5a46ebb28628', N'Mustard', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (253, N'7a88a488-0377-4fcc-abc7-0b7e6df4327a', N'Romaine', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (254, N'c7691dd2-5c52-4279-b92b-3fed0b6c5673', N'Sencha', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (255, N'f9860966-850b-4621-b4d9-27591376b8e6', N'Bancha', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (256, N'd1c2f007-6c0c-40ba-a19e-6028d15d77e2', N'Hibiscus', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (257, N'270fbc8b-502f-4a46-9c7f-c2410ef49b65', N'Pear', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (258, N'e2e0ab18-dfb4-41dc-b219-a45daa281dad', N'Celery', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (259, N'fa1e201b-61a5-46fb-aadd-ff619663a75a', N'Pineapple', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (260, N'3a02658d-d731-43b3-ac70-20d55492018f', N'Grapes', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (261, N'b6e58b2a-0582-4b89-960b-1a9854143b1a', N'Malt', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (262, N'2faf3655-59ab-4361-9faa-e135faaf8e2d', N'Barley', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (263, N'50b448e3-3cb9-4e64-bf03-74887a232081', N'Rockmelon', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (264, N'13439dc1-2e90-4dd7-99af-c9df1ee8e026', N'Walnuts', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (265, N'69f871f3-9444-4510-8ec1-f6204e1c77c7', N'Seasoning', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (266, N'0d56ba90-45db-4fb7-bd12-911f69dc4ae5', N'Alcohol', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (267, N'5f58c27a-d637-41e0-b20d-950ff33e6615', N'Mignonette', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (268, N'1ab8a957-e99f-4557-992d-52b299330488', N'Oatmeal', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (269, N'9613b575-7fdc-4b84-a0f7-78aa3277384c', N'Trout', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (270, N'af609dce-a6fa-4113-a67d-7fff0d2256ce', N'Hazelnut', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (271, N'e0bcbac5-3f4e-4ef8-8d66-dc99c7e8087f', N'Rum', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (272, N'2e4557b7-7cbd-4173-970e-4123653c4844', N'Olive oil', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (273, N'c1320488-86e0-4843-866c-0434a98bd57a', N'Leeks', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (274, N'ffdfb71f-16cf-4972-9d8f-4004ecdeae11', N'Bourbon', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (275, N'fb038905-ba01-4996-be97-38aa84470484', N'Gastrique', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (276, N'59ffb12d-fbea-48b0-b9f7-f4b35e79a340', N'Whiskey', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (277, N'4d765b01-64d7-413f-9cea-b087a3ba384e', N'Caffeine', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (278, N'59cc7846-838b-49f1-b5af-45c76b209f9c', N'Apricot', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (279, N'1866605a-3a6f-45f4-8d7a-44a8d8ea9135', N'Harissa', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (280, N'f21739ea-27a4-4b65-89b2-49a8b8fe438f', N'Mint', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (281, N'209a12a2-8bcc-4a1d-a87b-9d811c2decab', N'Champagne', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (282, N'689561d1-8359-4d4b-afa8-5a7bba282bce', N'Onion', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (283, N'51add01d-a0d1-4db5-8aef-bd3ef08503d3', N'Veloute', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (284, N'9b003465-fb09-415a-82bd-e7cf9950e192', N'Scallop', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (285, N'01b1ed6b-3a8a-45cb-9d3a-1d237bb3e0fe', N'Lemon Butter', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (286, N'beb5b56c-1923-4d5e-ae29-2398359b0657', N'Grape', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (287, N'1a894ee0-8480-4003-a7b4-50f87b048da9', N'Herbs', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (288, N'0ffd2efb-e3f1-41bc-989d-ca9a23e5751c', N'Chive Oil', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (289, N'd8a66d8c-2616-44e7-9433-5bf5829d65ae', N'Fries', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (290, N'07ee8d4a-9412-4767-93e8-2f1f82d94f96', N'Chantilly', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (291, N'a2e2c983-ae7b-46ca-b77d-e49a6c3b3f6f', N'Compotè', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (292, N'1d7983e3-b732-4b82-9ee6-5ead1aefed73', N'Honeycomb', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (293, N'08afcf82-2fa3-48f3-befd-b16f203f90aa', N'Nuts', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (294, N'1ce6c0f1-e874-41d3-8e22-7462a2649a7a', N'Pesto', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (295, N'ff13af76-4bce-4e49-b0b3-9b88339c04c4', N'Peas', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (296, N'2eafa5cd-a045-4cbd-82c6-de205d8869fd', N'Elderflower', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (297, N'7678b72e-7323-4693-b265-64f92e7b5e8e', N'Fig', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (298, N'7ef2e4d6-5feb-40f9-b171-e9548f48aff6', N'Cider', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (299, N'c92a5499-7879-4719-96eb-6128f77d0df3', N'Wheat', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (300, N'36b2fd96-e919-4583-a439-b2979c83e90f', N'Berry', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (301, N'eb3574eb-3752-4aab-9d1e-901e5aaa90a0', N'Flour', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (302, N'3600b113-b530-4207-9a41-b909be866d69', N'Pickle', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (303, N'c3d49da9-eb22-4d37-8578-5f3c517e8327', N'Coriander', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (304, N'50fe70ce-5836-4d52-83db-3f629ba825b2', N'Peach', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (305, N'3f4537f2-0307-4948-a6f4-bf7a87cab254', N'Plum', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (306, N'80293666-9329-4242-8468-b10c9f873bd1', N'popcorn', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (307, N'176041ff-2608-4efd-b5f4-a04f72e06a91', N'caramel', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (308, N'0ee02b8c-f42e-4b45-9897-1efeaaf03ca0', N'Saurkraut', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (309, N'155327a4-3067-4556-bbbc-86f91745a94f', N'sour cream', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (310, N'fe5c895f-5aad-4846-bd10-687ee4a5bfe7', N'Tequila', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (311, N'ba86edd5-430f-435e-8d5d-ee8c361b2688', N'Jalapeno', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (312, N'69bd84ca-7b71-4370-914b-4496f62067da', N'Root Beer', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (313, N'eecf8f35-4b97-45dc-b88f-e6c0d8803819', N'Gin', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (314, N'dac1c8be-d3c8-49a6-9e12-dd38146c4918', N'Bananas', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (315, N'c031ce13-0469-4e52-a2fa-9485c73c32af', N'Maple Syrup', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (316, N'e86da4c1-f709-452b-9c67-2ce4482d62ac', N'Lime', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (317, N'9bf8f741-413e-4700-9118-3da02abb3119', N'Cuttlefish', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (318, N'd7e14cd0-afca-45a4-9e3f-69701ecd1308', N'Stock', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (319, N'446dfae0-c068-4a61-a626-4626a93e53ed', N'Black Sauce', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (320, N'32e240b0-ada1-43ed-bd82-ff5ad659b43e', N'Dumpling', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (321, N'19082c61-c73f-4b42-b6cc-136b8aacd470', N'Shichimi', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (322, N'ca926f21-a361-4b18-a8ce-f9d1efa91d32', N'Curry', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (323, N'c926a81f-27c2-419f-a441-150e35b9996e', N'tom yum', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (324, N'7d4936b9-76d2-49f0-818c-26a11f3c4f0a', N'vanila', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (325, N'9fc7ba33-db67-472c-90fb-64cd01610a7b', N'rendang', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (326, N'473c8af4-f6d7-4f25-98ce-9f58fd3aa42d', N'Siracha', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (327, N'867ff985-e2e7-4d51-8368-609a276b08f8', N'Marie Rose sauce', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (328, N'7416844a-3282-414e-9f5a-2d7ce76dfd26', N'Truffle Sauce', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (329, N'db51ef9e-b6b6-4c75-abda-979969775a5a', N'Poached Egg', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (330, N'31365bd2-01d2-4bd2-8801-1cdcc08d279d', N'Soft Shell Crab', 0)
+GO
+INSERT [dbo].[DishIngredient] ([Id], [GuId], [Name], [Deleted]) VALUES (331, N'83d99c82-e2ff-468e-a80f-0f7d3aa078b5', N'Bak Kwa', 0)
+GO
+SET IDENTITY_INSERT [dbo].[DishIngredient] OFF
+GO
+SET IDENTITY_INSERT [dbo].[EatsyDishCategory] ON 
+
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (6, N'0116711f-9b05-4b05-ab34-10c4686ea33b', N'Soup', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (7, N'14b1fd53-346c-4f70-9bcd-68c09b819419', N'Salad', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (8, N'4a09163f-73f1-45d8-b5af-024d516d4c43', N'Brunch', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (9, N'47da0505-d4e9-45da-92c7-3dad32c0afd7', N'Pasta', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (10, N'e530e046-2c54-4d4c-bf1a-93c8eab54be1', N'Wine', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (11, N'0104aa77-5bed-4ea7-898b-4e9206f54bdd', N'Appetisers', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (12, N'7d803efe-2c50-4afd-ba75-7270eed4d5ce', N'Main course', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (13, N'e7ace8f6-573f-47ba-b8ab-4d9f3ab58b2f', N'Desserts', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (14, N'e7ace8f6-573f-47ba-b8ab-4d9f3ab58b2f', N'Drinks', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (15, N'1c81d8c6-b75d-4e15-bbe2-c7a15bd4ef5c', N'Beer', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (16, N'cdcc9f34-62d3-4970-99fb-6cf802d49c42', N'Sandwich', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (17, N'dc7abf6d-3ecb-44b0-b594-663323a99bee', N'Breakfast', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (18, N'af4eda59-1c07-4cfe-9f3c-cb307f3c8ae0', N'Spirits', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (19, N'5c8b9584-8782-45de-ad7e-54425b6d061c', N'Burgers', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (20, N'c84ce302-d81e-4c12-8363-430d163dffc2', N'Seafood', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (21, N'e4c15295-5abd-45d8-91c9-cf6520fd5468', N'Smoothie', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (22, N'e235362d-68f4-4760-bda5-840d2e6c99bc', N'Antipasta', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (23, N'e235362d-68f4-4760-bda5-840d2e6c99bc', N'Sharing Platters', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (24, N'8ead68d1-3316-4cad-8fe4-87fe011b75db', N'Pizza', 0)
+GO
+INSERT [dbo].[EatsyDishCategory] ([Id], [GuId], [Name], [Deleted]) VALUES (25, N'6e15b6ab-2c63-4a7b-9a8e-84ce92ed8e40', N'Sides', 0)
+GO
+SET IDENTITY_INSERT [dbo].[EatsyDishCategory] OFF
+GO
+SET IDENTITY_INSERT [dbo].[EatsyLocation] ON 
+
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (1, N'Alexandra', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (2, N'Amber Road', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (3, N'Ang Mo Kio', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (4, N'Anson', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (5, N'Ayer Rajah', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (6, N'Balestier', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (7, N'Beach Road', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (8, N'Bedok', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (9, N'Bedok North', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (10, N'Bendemeer', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (11, N'Bishan', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (12, N'Boat Quay', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (13, N'Boon Keng', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (14, N'Boon Lay', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (15, N'Braddell', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (16, N'Buangkok', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (17, N'Bugis', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (18, N'Bukit Batok', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (19, N'Bukit Merah', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (20, N'Bukit Panjang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (21, N'Bukit Timah', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (22, N'Buona Vista', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (23, N'Cantonment', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (24, N'Chai Chee', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (25, N'Changi', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (26, N'Changi Village', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (27, N'CHIJMES', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (28, N'Chinatown', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (29, N'Choa Chu Kang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (30, N'City Hall', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (31, N'Clarke Quay', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (32, N'Clementi', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (33, N'Club Street', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (34, N'Dempsey', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (35, N'Depot', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (36, N'Dhoby Ghaut', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (37, N'Dover', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (38, N'Duxton', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (39, N'East Coast', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (40, N'Eunos', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (41, N'Fullerton', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (42, N'Geylang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (43, N'Ghim Moh', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (44, N'Harbourfront', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (45, N'High Street', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (46, N'Hillview', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (47, N'Holland Village', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (48, N'Hougang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (49, N'Jalan Besar', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (50, N'Jalan Kayu', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (51, N'Joo Chiat', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (52, N'Jurong East', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (53, N'Jurong West', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (54, N'Kaki Bukit', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (55, N'Kallang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (56, N'Katong', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (57, N'Kembangan', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (58, N'Kent Ridge', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (59, N'Keong Saik', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (60, N'Lavender', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (61, N'Little India', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (62, N'Loyang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (63, N'Macpherson', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (64, N'Marina Bay', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (65, N'Marina South', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (66, N'Marine Parade', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (67, N'Mountbatten', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (68, N'Newton', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (69, N'Novena', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (70, N'Old Airport', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (71, N'Old Airport Road', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (72, N'Orchard', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (73, N'Outram', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (74, N'Pasir Panjang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (75, N'Pasir Ris', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (76, N'Paya Lebar', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (77, N'Potong Pasir', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (78, N'Promenade', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (79, N'Punggol', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (80, N'Queenstown', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (81, N'Raffles Place', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (82, N'Redhill', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (83, N'River Valley', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (84, N'Robertson Quay', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (85, N'Rochester', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (86, N'Science Park', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (87, N'Scotts Road', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (88, N'Seletar', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (89, N'Sembawang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (90, N'Sengkang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (91, N'Sentosa', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (92, N'Serangoon', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (93, N'Siglap', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (94, N'Simei', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (95, N'Stadium', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (96, N'Suntec', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (97, N'Tai Seng', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (98, N'Tampines', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (99, N'Tanglin', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (100, N'Tanjong Pagar', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (101, N'Tanjong Rhu', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (102, N'Telok Blangah', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (103, N'Thomson', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (104, N'Tiong Bahru', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (105, N'Toa Payoh', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (106, N'Tuas', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (107, N'Ubi', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (108, N'Upper Aljunied', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (109, N'Upper Bukit Timah', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (110, N'Upper Changi', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (111, N'Upper East Coast', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (112, N'Upper Serangoon', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (113, N'West Coast', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (114, N'Whampoa', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (115, N'Woodlands', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (116, N'Yio Chu Kang', 0)
+GO
+INSERT [dbo].[EatsyLocation] ([Id], [Name], [Deleted]) VALUES (117, N'Yishun', 0)
+GO
+SET IDENTITY_INSERT [dbo].[EatsyLocation] OFF
+GO
+SET IDENTITY_INSERT [dbo].[FiveWord] ON 
+
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (90, N'57733902-65aa-4c68-9a05-3682f6e2bb27', N'All-Day Breakfast', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (91, N'1c161f4a-98b5-49fa-82e3-97c56d0a6f3d', N'American', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (92, N'b4d8d6ef-7bb8-44fe-be66-715489413ed7', N'Argentinean', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (93, N'e8f0ca8f-5723-41aa-9826-4835b497b540', N'Asian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (94, N'6ff5b7f7-3cc0-409f-8601-547bc86cc6c5', N'Australian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (95, N'96d207d4-da98-4609-a98d-21d5e116c97e', N'Austrian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (96, N'2e19232c-fb58-4b47-953f-ea295f3edf64', N'Bar', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (97, N'f0c3e37a-2b7c-4d0c-aba8-500fe432f5c6', N'Barbecue', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (98, N'22391a6f-d52b-4ded-8c50-3d84db45fa9d', N'Beer', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (99, N'17880383-003c-43bc-9ff4-998cf9d2c752', N'Beijing', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (100, N'242ef97f-d224-4078-9a77-bbfe8215eb05', N'Brazilian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (101, N'6a33d8c5-c69d-4864-82ca-5cf57cb190d4', N'British', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (102, N'4d648776-4571-4f49-8f60-74dc84371509', N'Buffet', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (103, N'17f89211-6825-4f21-ae2a-8c468bdf4204', N'Cafe', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (104, N'f6243924-d18c-4a51-9c6f-2fff3bf36b97', N'Cajun', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (105, N'4fa6274d-5e74-46d1-ac6c-4871e93e81fa', N'Cajun/Creole', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (106, N'28e09bdc-66c3-459e-9bb1-84400f445c10', N'Cantonese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (107, N'ceaf3a2f-7b2c-489c-bb2c-0189715bae74', N'Caribbean', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (108, N'c773ed3f-28e2-4a3d-b335-a7a0268a60da', N'Chinese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (109, N'afa14f23-b71a-4d74-946b-88f8e4da18d9', N'Cocktails', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (110, N'bde339f3-8168-41bb-9172-df99cce0a20a', N'Cuban', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (111, N'9f96f58c-a65b-45db-b17f-64a9e1d61357', N'Desserts', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (112, N'cd66d95e-3349-411f-9807-b61cf0e08d1c', N'Dim Sum', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (113, N'4a9b0e4f-57d2-419a-b557-abe9587138c6', N'Drinks', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (114, N'ebbc9f42-961c-4360-8d59-2e23e0113cc4', N'English', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (115, N'09a722c0-5c8e-4c60-8481-b8265880c35a', N'European', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (116, N'778a340a-93ef-4f41-aad4-22a64a374a31', N'Filipino', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (117, N'f55e8f8b-9569-483c-9fe4-5152cb965d06', N'French', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (118, N'ba5f1588-e42e-4954-81cf-033df778b61c', N'Fruits & Drinks', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (119, N'9a7e3fec-2700-47bf-8169-c45c5f25a296', N'Fusion', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (120, N'cc1385dd-8145-4f44-acd9-0e1befab68cf', N'German', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (121, N'dfecf7c9-a615-4915-88f8-2338910c6e43', N'Greek', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (122, N'e108a5ad-91a7-4557-a1df-09780e19aa09', N'Halal Certified', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (123, N'ebc8729e-8891-4d11-9a02-776f54a3efdd', N'Hokkien', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (124, N'07c6b333-75e2-42d1-baa8-0177c4994a13', N'Hong Kong', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (125, N'd788cc10-3412-4164-9f82-b0ca2b8ac395', N'Hunan', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (126, N'1a3671e5-c4b3-4cdc-82ca-86496b144429', N'Indian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (127, N'9d4b6552-286c-4d68-bea1-a59a8ae55c9e', N'Indochinese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (128, N'191105e8-cb7d-4785-a7bc-559645f00059', N'Indonesian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (129, N'1b0f72fd-39ad-474d-b664-a7bcf75d67fc', N'International', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (130, N'761afd72-6211-4904-8dce-5ba475dba5ad', N'Iranian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (131, N'76b5dd7f-7e18-413f-94af-beff72f51912', N'Italian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (132, N'f193b054-5632-4b90-8319-1bff5eb30e31', N'Japanese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (133, N'36df5139-8df0-484c-b648-12c91c07de1b', N'Juices', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (134, N'9bf28293-cddd-4192-a110-773c1890c65a', N'Korean', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (135, N'05c7a2e2-245e-45dd-a6b4-962c8d320049', N'Latin American', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (136, N'002a90a7-8ce5-4d4f-9b97-22966e03996f', N'Lebanese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (137, N'9c6cc458-6603-4bbb-aee7-c194e0e9260e', N'Local', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (138, N'e844e10b-eb29-4a6a-be92-585986c3bbba', N'Malaysian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (139, N'5902acb4-2dac-40f4-a122-e41270b35a82', N'Mediterranean', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (140, N'eac24e8e-ac45-411c-9768-edd1d1b60298', N'Mexican', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (141, N'46c336e8-98a6-495d-88c0-967bc1734ffc', N'Middle Eastern', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (142, N'a72ff9e5-5031-4e1e-a1ce-4653e3e80dc5', N'Modern European', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (143, N'db1dd8a9-41d7-4c14-8930-c9d83c544e8b', N'Moroccan', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (144, N'28468c5d-60be-4862-8c13-a6b64d36ca3c', N'Nepalese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (145, N'bf7f86bf-0643-4426-9855-6c3e06ee9d90', N'New Zealand', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (146, N'49e1c908-1e62-47ef-bf71-f4396466e0c3', N'Nonya', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (147, N'ac165fa1-859e-4750-ad3f-e79857c5f6d0', N'North Indian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (148, N'c0061a68-ac8c-4dcc-aca4-d5082e9abadb', N'Peranakan', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (149, N'f6b8b1e2-4525-4882-9f49-2e36693904d7', N'Persian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (150, N'578a5734-71ab-4308-ab06-3e976f3958b2', N'Pizza', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (151, N'9080ad44-5e4c-432d-a5fb-f075ff57b7e4', N'Portuguese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (152, N'8d12e97c-90d4-4fc4-8c06-e041cb26747a', N'Russian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (153, N'9bf4d7d8-6c4a-44d7-bb50-5facdd9ba7cc', N'Scottish', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (154, N'921e7394-b554-4c20-92c5-74635c2727a4', N'Seafood', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (155, N'e70d358c-282d-47d3-831f-b5d1b2e16005', N'Shanghainese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (156, N'5f5dbb67-3d2f-4a86-b590-5a20052ef85e', N'Sichuan', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (157, N'4c98cca9-6019-40cd-92ad-4d08ff02031d', N'Singaporean', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (158, N'0f9b928a-62a3-4cbc-867e-aa4301b6a77a', N'Snacks', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (159, N'bd5f5188-d14e-4ff7-9d06-6ab57a4f1366', N'South American', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (160, N'1be08307-81fa-4c00-b5c7-ca08353ddc94', N'South Indian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (161, N'678b33f5-a455-4341-bfd6-31eccb8aea77', N'Southeast Asian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (162, N'98f95c6a-e3e4-4e36-b485-12aef60c536b', N'Spanish', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (163, N'33d4f327-68ee-4d61-85d4-fe5e6d49d652', N'Steak and Grills', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (164, N'3b151b7f-e8b6-409f-86a4-b777a4ba5307', N'Steakhouse', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (165, N'4d76cfe9-2a3f-4277-8b61-44a39695da97', N'Steamboat', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (166, N'8f215816-461b-49cd-b6e5-02a2c4bee7ac', N'Swedish', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (167, N'd4b3c80f-de62-4e97-8d24-597759a9c909', N'Swiss', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (168, N'2a1f96ce-f6ef-4cdf-8fff-d7097ac1fde0', N'Taiwanese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (169, N'4399e138-e9fe-42d7-a123-1f388fe0f444', N'Teochew', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (170, N'82347771-6a5d-4e5f-8042-6280fd808a8e', N'Thai', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (171, N'd786b728-3327-46d9-a647-3d332551c159', N'Turkish', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (172, N'8740a26d-3e64-4fc2-9ba1-2a1488192149', N'Vegetarian', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (173, N'dbfb594d-f8aa-4b69-a400-338c24a137ea', N'Vegetarian Friendly', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (174, N'f8a33bef-f6be-498c-bc9d-af19e7998807', N'Vietnamese', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (175, N'909b3430-768c-4011-89fe-7734906e071d', N'Western', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (176, N'3e55fdec-e42e-46ff-a3de-d5d7f7680305', N'Wine', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (177, N'8a4e23a5-f567-474e-a9ae-f1355d901b6c', N'Wines', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (178, N'f0b9f2e4-1610-4814-8885-5090a4a11348', N'Zi Char', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (179, N'edcaec0b-b8e8-469a-85f5-d4bb63d99f3c', N'Bars & Pubs', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (180, N'b3911a21-06ba-4140-a6b1-235358f9d99d', N'Cafes', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (181, N'72b25a90-61c3-4c7b-babc-ce3cfb73b5fe', N'Coffee Shop', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (182, N'3dc50a9d-e7b3-4b56-99b4-36f262b8a31d', N'Confectionery & Bakeries', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (183, N'232db398-504d-48b6-b37f-dbe89407c271', N'Fast Food', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (184, N'8e7ad4c2-2ef7-4881-86a0-992e8f0817d0', N'Kiosks & Stalls', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (185, N'd0990e15-024e-4580-8dd5-4dd883b90f01', N'Lounge', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (186, N'bdb160b9-107d-4da6-99ae-e853fb308288', N'Restaurants', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (187, N'bade03fd-25f4-4913-b681-99aaf9bcb256', N'Tea', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (188, N'ca13f96c-3024-4d1e-ae99-e96ac14519d6', N'Fast Casual', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (189, N'46d4ddae-9fea-47ab-8b3c-c4975fe17e83', N'Fine Dining', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (190, N'e5deecac-4a01-46d2-a812-e770fe4d8791', N'Casual Dining', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (191, N'01ed3a55-7ba2-41c5-b36a-bc00d835b4b4', N'Dessert Parlor', N'Type of place', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (192, N'b7697ba5-86d8-4f4d-911c-65a935266337', N'After Work', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (193, N'b82eb21c-a1ca-47ba-807c-3b40cddcbfc1', N'Ala Carte', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (194, N'664be5c8-8af4-4b1f-afd1-4520ee3b8624', N'Alfresco/Outdoor Dining', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (195, N'67105b39-0901-493f-8c02-61bd99d72846', N'Anniversary', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (196, N'48b68018-24d7-45e6-a71c-67ef268c491b', N'BBQ', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (197, N'6ef46548-e2a6-428c-88bb-fd6063cf0bc1', N'Birthdays', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (198, N'9852cabf-65a3-4c0a-9e00-c5381e749bcd', N'Boys Night Out', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (199, N'cff628b4-8e55-4f96-8789-535100e50f3d', N'Breakfast', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (200, N'724a2761-5cc3-4f68-8b2d-08025d6004ab', N'Brunch', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (202, N'88da510d-b580-45a3-9bbb-e6a628dc9ae8', N'Business Breakfast', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (203, N'b76a2c99-cb91-4dcc-aed3-3179aebd52d1', N'Business Dining', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (204, N'b4a8d799-7eb8-45df-af29-03f18e0ae7ee', N'Cheap Eat/Budget', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (205, N'694870b4-06f5-4eba-aea5-44080c97611d', N'Children/Family', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (206, N'afdabc17-3dc8-4bd1-b1c5-1caf820859b7', N'Chillout', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (207, N'f9a0ee52-40b1-4991-8ad7-cfe18df80468', N'Corporate Events', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (208, N'31ec2cfc-3dcd-4890-925d-a1c272116db7', N'Delivery', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (209, N'30a0d805-eac1-4079-8002-1204827876e3', N'Dinner', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (210, N'5e4dfbf8-1e14-423a-b212-b9fa76f26977', N'Festivals', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (212, N'8e45d2c2-8a21-4229-955d-59cdd4926306', N'Formal Events', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (213, N'11c9900b-2d22-47d6-865c-5ae3e17c9880', N'Girls Night Out', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (214, N'1086221b-9628-4d8c-821e-94e472ad64e6', N'Healthy Eating', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (215, N'e8a4220f-0a1e-40e4-ae2a-45d333a5bbe4', N'Hidden Find', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (216, N'04f4bb82-dc6b-42a8-b07e-83101f579131', N'High Tea', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (217, N'2166ebcf-c7a2-465a-b07c-3a3f7c1a7ad7', N'Large Groups', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (218, N'a1e746b8-3648-41f9-83c5-2c3a9bd82473', N'Large Groups/Gathering', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (219, N'b261b5ea-1125-4ef1-a468-e9fa6e1418b4', N'Live Band', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (220, N'd648597f-394c-4942-bf18-26ff919a3997', N'Lunch', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (221, N'1cf41e44-6354-400b-93b7-87482b01da53', N'Nice Deco', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (222, N'f442cb98-423a-4a85-9523-85b4cbf89fee', N'Night Out', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (223, N'9a0ca25d-b71d-4f86-80d1-4d8895075930', N'Parties', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (224, N'c6edbd67-fa6d-48d9-9532-c1b3e7b0aece', N'People Watching', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (225, N'e1b82ee8-8a0f-42b5-90a1-c8bda2a06d9d', N'Pet Friendly', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (226, N'88d603a5-4542-4de3-8844-366e2541a6a6', N'Private Dining', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (227, N'2fff4377-d166-4161-bf3c-cfd121693f88', N'Quiet', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (228, N'0d240134-c787-4420-a858-2872bbffe4e1', N'Relaxed', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (229, N'41092e97-d346-4014-9cab-b7da997742f0', N'Romance/First Dates', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (230, N'fec78b08-ed72-437e-95a6-4dd783553c6c', N'Supper', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (231, N'b12e31b4-f266-413e-99e2-32f0bb9d0231', N'Take Away', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (232, N'97173b7f-b61e-4807-be74-2d839408dc9a', N'Trendy', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (233, N'53de54bd-d105-424d-bc8b-4bbb2340ee83', N'Vegetarians', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (234, N'04c9820c-ecc6-4e56-a787-64da6068579b', N'Vibrant/Noisy', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (235, N'9cbe548e-dd73-4c4b-8397-e3adb7e78df1', N'View/Scenery', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (236, N'72e853bd-8373-4eed-8068-f2b36b447540', N'Waterfront', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (237, N'502ad85e-b1ea-41cc-a7b6-5dd6acf82091', N'Weddings', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (238, N'f063126b-91dd-425e-8711-f3baee9ac805', N'Wheelchair Friendly', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (239, N'91947257-f0b2-47d8-86a6-9b70ec3240f7', N'Wine Lists', N'Suitable for', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (240, N'c1c0520b-5799-46c2-b406-e7b16a10fcb7', N'Sandwich shop', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (241, N'56d049b4-2931-4bc4-846f-865bc3072325', N'Bistro', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (242, N'ca2551bf-a88f-42e4-8623-b5f978bda968', N'banglamod', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (243, N'7d6a09ee-2d95-43b1-b867-74c1c3eee4b6', N'hello', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (244, N'c8563849-ce57-416e-b721-e6dc6723ce77', N'weefer', N'Cuisine', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (245, N'def6b052-229b-4a4e-b507-b621cbf86c10', N'Poke', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (246, N'6567a686-a12c-4201-ac49-1d722021103b', N'Vegan', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (247, N'2bde54dc-531e-4fc1-9fd5-8d269b1aab8c', N'convenient', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (248, N'4e280df2-bd48-4229-aaf2-fe4f339ce361', N'Fresh', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (249, N'06dd7c50-2d23-41f9-a41c-68cc22cd811c', N'Air Conditioning', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (250, N'1c99d818-0db3-48f9-bcbb-13a433ef1ca9', N'Late Night Supper', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (251, N'155a753f-496f-4aa8-b23e-0212e61f7b26', N'Happy Daze', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (252, N'1c59f0d2-4fdf-4cdc-9b4c-198fe0bd4912', N'Hot Buns', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (253, N'd394174e-3dc6-4a37-9598-e6b470ec18bd', N'Tasty Shakes', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (254, N'88210b22-8c45-48f9-9566-e1ce1c2e7ad1', N'Hangout', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (255, N'eea651dd-520a-4e09-957d-df380857159d', N'Booze', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (256, N'62828aeb-e77f-43c6-be71-3892200590f0', N'Studying', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (257, N'331fb421-be41-438e-b833-f052ffc33d07', N'Value', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (258, N'fbd69d6a-5c6e-4f73-8314-7d625778d6a7', N'Good music', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (259, N'db2f38c8-88c6-4a39-8f2e-1dc0024395ef', N'Cosy', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (260, N'98c38fda-cec0-4dbd-a2f8-59a3f7d8f0fe', N'Authentic', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (261, N'08306747-7756-4958-bc42-7ca09688f21f', N'Ramen', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (262, N'f744521b-1961-43c2-9409-e2a08d49c7fb', N'Poke Bowl', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (263, N'4ab848db-9cef-4eb3-a7ee-f3733d219367', N'Burgers', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (264, N'e538dfe3-7ac3-4dba-831d-cdffec325eb8', N'Milk Shakes', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (265, N'4b724915-9a99-4860-be96-f664adaf3bed', N'Alcohol', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (266, N'c91db373-4425-486e-b2c5-860a5aa52a03', N'Balanced Nutrition', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (267, N'91f64d41-624e-49b5-b011-f7283e721973', N'Smoothie bowls', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (268, N'c5d77138-3330-4366-9c91-099bfce68162', N'Poke bowls', N'Miscellaneus', 0)
+GO
+INSERT [dbo].[FiveWord] ([Id], [GuId], [Name], [Category], [Deleted]) VALUES (269, N'f1c7b332-fca7-4550-bc5c-5740e96783b9', N'Alfresco', N'Miscellaneus', 0)
+GO
+SET IDENTITY_INSERT [dbo].[FiveWord] OFF
+GO
